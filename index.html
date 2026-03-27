@@ -330,4 +330,784 @@ body { background:var(--bg); color:var(--text); font-family:'Inter',sans-serif; 
 .player-stat-row { background:var(--card); border:1px solid var(--border); border-radius:10px; padding:12px; margin-bottom:8px; }
 .psr-header { display:flex; justify-content:space-between; align-items:center; margin-bottom:10px; }
 .psr-name { font-size:13px; font-weight:700; }
-.psr-pts { font-family:"Bebas Neue",cursi
+.psr-pts { font-family:"Bebas Neue",cursive; font-size:20px; }
+.psr-detail { font-size:10px; color:var(--muted); margin-bottom:8px; min-height:14px; }
+.stat-inputs { display:grid; grid-template-columns:repeat(3,1fr); gap:6px; }
+.stat-input-wrap { }
+.stat-lbl { font-size:9px; font-weight:700; letter-spacing:1px; text-transform:uppercase; color:var(--muted); margin-bottom:4px; }
+.stat-inp { background:var(--card2); border:1px solid var(--border); border-radius:6px; padding:7px 8px; color:var(--text); font-size:13px; font-weight:700; width:100%; text-align:center; transition:border-color 0.2s; }
+.stat-inp:focus { outline:none; border-color:var(--orange); }
+.stat-inp::placeholder { color:var(--muted2); }
+.fielding-inputs { display:grid; grid-template-columns:repeat(3,1fr); gap:6px; margin-top:6px; }
+
+.stats-total-row { display:flex; justify-content:space-between; align-items:center; padding:10px 0 2px; border-top:2px solid var(--border); margin-top:6px; font-size:13px; font-weight:700; }
+.stats-total-val { font-family:"Bebas Neue",cursive; font-size:24px; }
+
+.calc-btn { background:linear-gradient(135deg,#6366f1,#4f46e5); color:white; border:none; border-radius:10px; padding:13px; font-family:"Bebas Neue",cursive; font-size:18px; letter-spacing:2px; cursor:pointer; width:100%; transition:all 0.2s; margin-top:10px; margin-bottom:6px; }
+.calc-btn:hover { transform:translateY(-1px); box-shadow:0 6px 20px rgba(99,102,241,0.3); }
+.calc-btn:disabled { background:var(--muted2); cursor:not-allowed; transform:none; }
+.calc-status { font-size:12px; text-align:center; min-height:16px; margin-bottom:4px; color:var(--muted); }
+.calc-status.loading { color:var(--purple); }
+.calc-status.error { color:var(--red); }
+.calc-status.done { color:var(--green); }
+.how-to-box { background:rgba(99,102,241,0.06); border:1px solid rgba(99,102,241,0.2); border-radius:12px; padding:14px; margin-top:10px; margin-bottom:14px; }
+.how-to-title { font-size:11px; font-weight:800; letter-spacing:1.5px; text-transform:uppercase; color:var(--purple); margin-bottom:10px; }
+.how-to-step { display:flex; align-items:center; gap:10px; font-size:13px; color:#94a3b8; padding:5px 0; }
+.how-step-num { width:22px; height:22px; border-radius:50%; background:var(--orange); color:white; font-size:11px; font-weight:800; display:flex; align-items:center; justify-content:center; flex-shrink:0; }
+.calc-btn { background:linear-gradient(135deg,#6366f1,#4f46e5); color:white; border:none; border-radius:10px; padding:13px; font-family:"Bebas Neue",cursive; font-size:18px; letter-spacing:2px; cursor:pointer; width:100%; transition:all 0.2s; margin-bottom:6px; }
+.calc-btn:hover { transform:translateY(-1px); box-shadow:0 6px 20px rgba(99,102,241,0.3); }
+.calc-btn:disabled { background:var(--muted2); cursor:not-allowed; transform:none; box-shadow:none; }
+.calc-status { font-size:12px; text-align:center; min-height:16px; margin-bottom:6px; color:var(--muted); }
+.calc-status.loading { color:var(--purple); }
+.calc-status.error { color:var(--red); }
+.calc-status.done { color:var(--green); }
+.breakdown-box { background:var(--card2); border:1px solid var(--border); border-radius:12px; padding:14px; margin-bottom:12px; }
+.breakdown-title { font-size:11px; font-weight:800; letter-spacing:1.5px; text-transform:uppercase; margin-bottom:10px; padding-bottom:8px; border-bottom:1px solid var(--border); }
+.breakdown-title.ct { color:var(--chotu); }
+.breakdown-title.dt { color:var(--dhakan); }
+.breakdown-player { display:flex; justify-content:space-between; align-items:flex-start; padding:8px 0; border-bottom:1px solid rgba(42,46,80,0.4); gap:8px; }
+.breakdown-player:last-child { border-bottom:none; }
+.bp-name { font-size:13px; font-weight:700; flex:1; }
+.bp-detail { font-size:11px; color:var(--muted); margin-top:2px; line-height:1.5; }
+.bp-pts { font-size:15px; font-weight:800; font-family:"Bebas Neue",cursive; letter-spacing:1px; flex-shrink:0; }
+.breakdown-total { display:flex; justify-content:space-between; padding:10px 0 0; margin-top:6px; border-top:2px solid var(--border); font-weight:800; font-size:15px; }
+.bt-val { font-family:"Bebas Neue",cursive; font-size:22px; }
+
+.calc-btn { background:linear-gradient(135deg,#6366f1,#4f46e5); color:white; border:none; border-radius:10px; padding:12px; font-family:"Bebas Neue",cursive; font-size:18px; letter-spacing:2px; cursor:pointer; width:100%; transition:all 0.2s; margin-top:10px; margin-bottom:8px; }
+.calc-btn:hover { transform:translateY(-1px); box-shadow:0 6px 20px rgba(99,102,241,0.35); }
+.calc-btn:disabled { background:var(--muted2); cursor:not-allowed; transform:none; box-shadow:none; }
+.calc-status { font-size:12px; color:#94a3b8; text-align:center; min-height:18px; margin-bottom:6px; }
+.calc-status.loading { color:var(--purple); }
+.calc-status.error { color:var(--red); }
+.calc-status.done { color:var(--green); }
+
+.calc-btn { background:linear-gradient(135deg,#6366f1,#4f46e5); color:white; border:none; border-radius:10px; padding:13px; font-family:"Bebas Neue",cursive; font-size:18px; letter-spacing:2px; cursor:pointer; width:100%; transition:all 0.2s; margin-top:10px; margin-bottom:6px; }
+.calc-btn:hover { transform:translateY(-1px); box-shadow:0 6px 20px rgba(99,102,241,0.3); }
+.calc-btn:disabled { background:var(--muted2); cursor:not-allowed; transform:none; }
+.calc-status { font-size:12px; text-align:center; min-height:16px; margin-bottom:4px; color:var(--muted); }
+.calc-status.loading { color:var(--purple); }
+.calc-status.error { color:var(--red); }
+.calc-status.done { color:var(--green); }
+.how-to-box { background:rgba(99,102,241,0.06); border:1px solid rgba(99,102,241,0.2); border-radius:12px; padding:14px; margin-top:10px; margin-bottom:14px; }
+.how-to-title { font-size:11px; font-weight:800; letter-spacing:1.5px; text-transform:uppercase; color:var(--purple); margin-bottom:10px; }
+.how-to-step { display:flex; align-items:center; gap:10px; font-size:13px; color:#94a3b8; padding:5px 0; }
+.how-step-num { width:22px; height:22px; border-radius:50%; background:var(--orange); color:white; font-size:11px; font-weight:800; display:flex; align-items:center; justify-content:center; flex-shrink:0; }
+.calc-btn { background:linear-gradient(135deg,#6366f1,#4f46e5); color:white; border:none; border-radius:10px; padding:13px; font-family:"Bebas Neue",cursive; font-size:18px; letter-spacing:2px; cursor:pointer; width:100%; transition:all 0.2s; margin-bottom:6px; }
+.calc-btn:hover { transform:translateY(-1px); box-shadow:0 6px 20px rgba(99,102,241,0.3); }
+.calc-btn:disabled { background:var(--muted2); cursor:not-allowed; transform:none; box-shadow:none; }
+.calc-status { font-size:12px; text-align:center; min-height:16px; margin-bottom:6px; color:var(--muted); }
+.calc-status.loading { color:var(--purple); }
+.calc-status.error { color:var(--red); }
+.calc-status.done { color:var(--green); }
+.breakdown-box { background:var(--card2); border:1px solid var(--border); border-radius:12px; padding:14px; margin-bottom:12px; }
+.breakdown-title { font-size:11px; font-weight:800; letter-spacing:1.5px; text-transform:uppercase; margin-bottom:10px; padding-bottom:8px; border-bottom:1px solid var(--border); }
+.breakdown-title.ct { color:var(--chotu); }
+.breakdown-title.dt { color:var(--dhakan); }
+.breakdown-player { display:flex; justify-content:space-between; align-items:flex-start; padding:8px 0; border-bottom:1px solid rgba(42,46,80,0.4); gap:8px; }
+.breakdown-player:last-child { border-bottom:none; }
+.bp-name { font-size:13px; font-weight:700; flex:1; }
+.bp-detail { font-size:11px; color:var(--muted); margin-top:2px; line-height:1.5; }
+.bp-pts { font-size:15px; font-weight:800; font-family:"Bebas Neue",cursive; letter-spacing:1px; flex-shrink:0; }
+.breakdown-total { display:flex; justify-content:space-between; padding:10px 0 0; margin-top:6px; border-top:2px solid var(--border); font-weight:800; font-size:15px; }
+.bt-val { font-family:"Bebas Neue",cursive; font-size:22px; }
+
+.sec-hdr { display:flex; align-items:center; gap:10px; margin-bottom:14px; }
+.sec-icon { width:34px; height:34px; border-radius:10px; background:rgba(249,115,22,0.12); border:1px solid rgba(249,115,22,0.25); display:flex; align-items:center; justify-content:center; font-size:16px; }
+.sec-text h3 { font-family:'Bebas Neue',cursive; font-size:18px; letter-spacing:2px; }
+.sec-text p { font-size:11px; color:var(--muted); }
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-brand">
+    <div class="hero-icon">🏆</div>
+    <div>
+      <div class="hero-title">IPL Fantasy</div>
+      <div class="hero-sub">Kabhi kabhi jeetne ke liye bahut kuch haarna padta hai… jaise ₹60. Baar baar.</div>
+    </div>
+  </div>
+
+  <div class="hero-cricket-icon">🏏</div>
+
+  <div class="hero-stats-grid">
+    <div class="hero-stat">
+      <div class="hs-num" id="hs-played" style="color:var(--text)">0</div>
+      <div class="hs-label">Matches Played</div>
+    </div>
+    <div class="hero-stat">
+      <div class="hs-num" style="color:var(--orange)" id="hs-remain">70</div>
+      <div class="hs-label">Remaining</div>
+    </div>
+    <div class="hero-stat">
+      <div class="hs-num" style="color:var(--chotu)" id="hs-ctot">0</div>
+      <div class="hs-label">Chotu Points</div>
+      <div class="hs-sub" id="hs-cwins">0 wins</div>
+    </div>
+    <div class="hero-stat">
+      <div class="hs-num" style="color:var(--dhakan)" id="hs-dtot">0</div>
+      <div class="hs-label">Dhakan Points</div>
+      <div class="hs-sub" id="hs-dwins">0 wins</div>
+    </div>
+  </div>
+</div>
+
+<!-- NAV -->
+<div class="nav">
+  <button class="nav-btn active" onclick="showTab('home')">🏠 Home</button>
+  <button class="nav-btn" onclick="showTab('matches')">📅 Matches</button>
+  <button class="nav-btn" onclick="showTab('log')">📋 Match Log</button>
+  <button class="nav-btn" onclick="showTab('rules')">⚡ Rules</button>
+</div>
+
+<!-- HOME TAB -->
+<div id="tab-home" class="page">
+  <!-- Highlight Cards -->
+  <div class="highlight-grid" id="highlight-cards">
+    <div class="hl-card hl-chotu">
+      <div class="hl-role">🟡 Current Leader</div>
+      <div class="hl-name" id="hl-leader">—</div>
+      <div class="hl-val" id="hl-leader-val">—</div>
+    </div>
+    <div class="hl-card hl-green">
+      <div class="hl-role">🎯 Best Predictor</div>
+      <div class="hl-name" id="hl-predictor">—</div>
+      <div class="hl-val" id="hl-predictor-val">—</div>
+    </div>
+    <div class="hl-card hl-dhakan">
+      <div class="hl-role">🔝 Most Wins</div>
+      <div class="hl-name" id="hl-mostwins">—</div>
+      <div class="hl-val" id="hl-mostwins-val">—</div>
+    </div>
+    <div class="hl-card hl-red">
+      <div class="hl-role">📉 Currently Behind</div>
+      <div class="hl-name" id="hl-behind">—</div>
+      <div class="hl-val" id="hl-behind-val">—</div>
+    </div>
+  </div>
+
+  <!-- Points Table -->
+  <div class="pts-table-wrap">
+    <div class="pts-table-header">
+      <div class="pts-table-icon">📊</div>
+      <div>
+        <div class="pts-table-title">Points Table</div>
+        <div class="pts-table-sub">Season standings</div>
+      </div>
+    </div>
+    <div class="pts-cols">
+      <div class="pts-col-lbl">Pos</div>
+      <div class="pts-col-lbl">Player</div>
+      <div class="pts-col-lbl">Played</div>
+      <div class="pts-col-lbl">Points</div>
+      <div class="pts-col-lbl">Wins</div>
+    </div>
+    <div id="pts-rows"></div>
+  </div>
+</div>
+
+<!-- MATCHES TAB -->
+<div id="tab-matches" class="page" style="display:none">
+  <div class="month-bar">
+    <button class="month-btn" onclick="shiftMonth(-1)">◀</button>
+    <div class="month-lbl" id="month-lbl">MAR 2026</div>
+    <button class="month-btn" onclick="shiftMonth(1)">▶</button>
+  </div>
+  <div id="match-list"></div>
+
+  <!-- Entry Panel -->
+  <div class="entry-panel" id="entry-panel">
+    <div class="ep-top">
+      <div class="ep-badge" id="ep-badge">M1</div>
+      <div class="ep-title" id="ep-title">Select a match</div>
+    </div>
+
+    <div class="ep-players">
+      <div class="c-col">
+        <div class="ep-col-hdr c"><div class="ep-av">C</div><div class="ep-col-name">Chotu's 6</div></div>
+        <div id="chotu-inputs"></div>
+      </div>
+      <div class="d-col">
+        <div class="ep-col-hdr d"><div class="ep-av">D</div><div class="ep-col-name">Dhakan's 6</div></div>
+        <div id="dhakan-inputs"></div>
+      </div>
+    </div>
+
+    <div class="pred-box">
+      <div class="pred-hdr">🎯 Match Winner Prediction <span>+20 PTS IF CORRECT</span></div>
+      <div class="pred-grid">
+        <div class="c-pred"><div class="pred-lbl">🟡 Chotu's Pick</div><select class="sel" id="chotu-pick"><option value="">-- Pick --</option></select></div>
+        <div class="d-pred"><div class="pred-lbl">🔵 Dhakan's Pick</div><select class="sel" id="dhakan-pick"><option value="">-- Pick --</option></select></div>
+      </div>
+      <div><div class="aw-lbl">🏆 Actual Match Winner</div><select class="sel" id="actual-winner" style="max-width:260px"><option value="">-- Select Winner --</option></select></div>
+      <div class="pred-tags" id="pred-tags"></div>
+    </div>
+
+    <div class="lbl">🔗 Scorecard URL</div>
+    <input type="text" class="url-fi" id="scorecard-url" placeholder="https://espncricinfo.com/.../full-scorecard">
+
+    <div id="api-status" style="font-size:11px;color:var(--green);margin-bottom:10px">✅ Calculator API ready</div>
+
+    <button class="calc-btn" onclick="calculateScores()" id="calc-btn">⚡ CALCULATE SCORES</button>
+    <div id="calc-status" class="calc-status"></div>
+    <div id="breakdown-box" class="breakdown-box" style="display:none"></div>
+
+    <div class="lbl" style="margin-top:10px">📊 Points (auto-filled · edit if needed)</div>
+    <div class="pts-row-grid">
+      <div>
+        <div style="font-size:10px;font-weight:800;letter-spacing:1px;color:var(--chotu);margin-bottom:6px">🟡 CHOTU BASE PTS</div>
+        <input type="number" class="pts-fi cf" id="manual-chotu" placeholder="0">
+      </div>
+      <div>
+        <div style="font-size:10px;font-weight:800;letter-spacing:1px;color:var(--dhakan);margin-bottom:6px">🔵 DHAKAN BASE PTS</div>
+        <input type="number" class="pts-fi df" id="manual-dhakan" placeholder="0">
+      </div>
+    </div>
+
+    <div id="edit-notice" style="display:none;background:rgba(249,115,22,0.08);border:1px solid rgba(249,115,22,0.25);border-radius:8px;padding:10px 14px;margin-top:12px;font-size:12px;color:#fb923c;">
+  ✏️ <strong>Edit Mode</strong> — Change anything above and tap Update. Previous data will be replaced.
+</div>
+<button id="save-btn" class="save-btn" onclick="saveMatch()">💾 SAVE MATCH RESULT</button>
+    <div class="saved-flash" id="saved-flash">✅ Match saved successfully!</div>
+
+    <div class="res-box" id="res-box">
+      <div class="res-scores">
+        <div class="res-card rc"><div class="res-pname">Chotu</div><div class="res-pts" id="res-c">—</div><div class="res-brk" id="res-c-brk"></div></div>
+        <div class="res-card rd"><div class="res-pname">Dhakan</div><div class="res-pts" id="res-d">—</div><div class="res-brk" id="res-d-brk"></div></div>
+      </div>
+      <div class="res-winner" id="res-win">—</div>
+    </div>
+  </div>
+</div>
+
+<!-- MATCH LOG TAB -->
+<div id="tab-log" class="page" style="display:none">
+  <div class="sec-hdr">
+    <div class="sec-icon">📋</div>
+    <div class="sec-text"><h3>Match Log</h3><p>All completed matches</p></div>
+  </div>
+  <div id="log-content">
+    <div class="empty-state"><div class="es-icon">🏏</div><div class="es-title">No matches yet</div><div class="es-sub">Save your first match to see the log</div></div>
+  </div>
+</div>
+
+<!-- RULES TAB -->
+<div id="tab-rules" class="page" style="display:none">
+  <div class="sec-hdr">
+    <div class="sec-icon">⚡</div>
+    <div class="sec-text"><h3>Scoring Rules</h3><p>Points system</p></div>
+  </div>
+  <div class="rules-grid">
+    <div class="rule-card">
+      <h4 style="color:var(--orange)">🎳 Bowling</h4>
+      <div class="rule-row"><span>Wicket (1st–3rd)</span><span class="rp">+20</span></div>
+      <div class="rule-row"><span>3+ Wicket Bonus</span><span class="rp">+10</span></div>
+      <div class="rule-row"><span>4th Wicket</span><span class="rp">+30</span></div>
+      <div class="rule-row"><span>5th Wicket</span><span class="rp">+30</span></div>
+      <div class="rule-row"><span>5th Wicket Bonus</span><span class="rp">+20</span></div>
+      <div class="rule-row"><span>Maiden Over</span><span class="rp">+10</span></div>
+      <div class="rule-row"><span>Hattrick</span><span class="rp">+50</span></div>
+    </div>
+    <div class="rule-card">
+      <h4 style="color:var(--chotu)">🏏 Batting</h4>
+      <div class="rule-row"><span>Each Run</span><span class="rp">+1</span></div>
+      <div class="rule-row"><span>Four (bonus)</span><span class="rp">+1</span></div>
+      <div class="rule-row"><span>Six (bonus)</span><span class="rp">+2</span></div>
+      <div class="rule-row"><span>50 Runs Bonus</span><span class="rp">+30</span></div>
+      <div class="rule-row"><span>Century Bonus</span><span class="rp">+40</span></div>
+    </div>
+    <div class="rule-card">
+      <h4 style="color:var(--dhakan)">🧤 Fielding</h4>
+      <div class="rule-row"><span>Catch</span><span class="rp">+10</span></div>
+      <div class="rule-row"><span>Stumping</span><span class="rp">+10</span></div>
+      <div class="rule-row"><span>Run Out</span><span class="rp">+10</span></div>
+    </div>
+    <div class="rule-card">
+      <h4 style="color:var(--green)">🎯 Prediction</h4>
+      <div class="rule-row"><span>Correct Team Pick</span><span class="rp">+20</span></div>
+      <div style="margin-top:10px;font-size:11px;color:var(--muted);line-height:1.6">Pick the winning team before each match. +20 pts auto-added if correct!</div>
+    </div>
+  </div>
+  <div class="prize-card">
+    <div class="prize-lbl">Max Prize Pool</div>
+    <div class="prize-val">₹1500</div>
+  </div>
+</div>
+
+<script>
+const MATCHES=[
+  {no:1,date:'2026-03-28',home:'Royal Challengers Bengaluru',away:'Sunrisers Hyderabad',venue:'Bengaluru'},
+  {no:2,date:'2026-03-29',home:'Mumbai Indians',away:'Kolkata Knight Riders',venue:'Mumbai'},
+  {no:3,date:'2026-03-30',home:'Rajasthan Royals',away:'Chennai Super Kings',venue:'Guwahati'},
+  {no:4,date:'2026-03-31',home:'Punjab Kings',away:'Gujarat Titans',venue:'New Chandigarh'},
+  {no:5,date:'2026-04-01',home:'Lucknow Super Giants',away:'Delhi Capitals',venue:'Lucknow'},
+  {no:6,date:'2026-04-02',home:'Kolkata Knight Riders',away:'Sunrisers Hyderabad',venue:'Kolkata'},
+  {no:7,date:'2026-04-03',home:'Chennai Super Kings',away:'Punjab Kings',venue:'Chennai'},
+  {no:8,date:'2026-04-04',home:'Delhi Capitals',away:'Mumbai Indians',venue:'Delhi'},
+  {no:9,date:'2026-04-04',home:'Gujarat Titans',away:'Rajasthan Royals',venue:'Ahmedabad'},
+  {no:10,date:'2026-04-05',home:'Sunrisers Hyderabad',away:'Lucknow Super Giants',venue:'Hyderabad'},
+  {no:11,date:'2026-04-05',home:'Royal Challengers Bengaluru',away:'Chennai Super Kings',venue:'Bengaluru'},
+  {no:12,date:'2026-04-06',home:'Kolkata Knight Riders',away:'Punjab Kings',venue:'Kolkata'},
+  {no:13,date:'2026-04-07',home:'Rajasthan Royals',away:'Mumbai Indians',venue:'Guwahati'},
+  {no:14,date:'2026-04-08',home:'Delhi Capitals',away:'Gujarat Titans',venue:'Delhi'},
+  {no:15,date:'2026-04-09',home:'Kolkata Knight Riders',away:'Lucknow Super Giants',venue:'Kolkata'},
+  {no:16,date:'2026-04-10',home:'Rajasthan Royals',away:'Royal Challengers Bengaluru',venue:'Guwahati'},
+  {no:17,date:'2026-04-11',home:'Punjab Kings',away:'Sunrisers Hyderabad',venue:'New Chandigarh'},
+  {no:18,date:'2026-04-11',home:'Chennai Super Kings',away:'Delhi Capitals',venue:'Chennai'},
+  {no:19,date:'2026-04-12',home:'Lucknow Super Giants',away:'Gujarat Titans',venue:'Lucknow'},
+  {no:20,date:'2026-04-12',home:'Mumbai Indians',away:'Royal Challengers Bengaluru',venue:'Mumbai'},
+  {no:21,date:'2026-04-13',home:'Sunrisers Hyderabad',away:'Rajasthan Royals',venue:'Hyderabad'},
+  {no:22,date:'2026-04-14',home:'Chennai Super Kings',away:'Kolkata Knight Riders',venue:'Chennai'},
+  {no:23,date:'2026-04-15',home:'Royal Challengers Bengaluru',away:'Lucknow Super Giants',venue:'Bengaluru'},
+  {no:24,date:'2026-04-16',home:'Mumbai Indians',away:'Punjab Kings',venue:'Mumbai'},
+  {no:25,date:'2026-04-17',home:'Gujarat Titans',away:'Kolkata Knight Riders',venue:'Ahmedabad'},
+  {no:26,date:'2026-04-18',home:'Royal Challengers Bengaluru',away:'Delhi Capitals',venue:'Bengaluru'},
+  {no:27,date:'2026-04-18',home:'Sunrisers Hyderabad',away:'Chennai Super Kings',venue:'Hyderabad'},
+  {no:28,date:'2026-04-19',home:'Kolkata Knight Riders',away:'Rajasthan Royals',venue:'Kolkata'},
+  {no:29,date:'2026-04-19',home:'Punjab Kings',away:'Lucknow Super Giants',venue:'New Chandigarh'},
+  {no:30,date:'2026-04-20',home:'Gujarat Titans',away:'Mumbai Indians',venue:'Ahmedabad'},
+  {no:31,date:'2026-04-21',home:'Sunrisers Hyderabad',away:'Delhi Capitals',venue:'Hyderabad'},
+  {no:32,date:'2026-04-22',home:'Lucknow Super Giants',away:'Rajasthan Royals',venue:'Lucknow'},
+  {no:33,date:'2026-04-23',home:'Mumbai Indians',away:'Chennai Super Kings',venue:'Mumbai'},
+  {no:34,date:'2026-04-24',home:'Royal Challengers Bengaluru',away:'Gujarat Titans',venue:'Bengaluru'},
+  {no:35,date:'2026-04-25',home:'Delhi Capitals',away:'Punjab Kings',venue:'Delhi'},
+  {no:36,date:'2026-04-25',home:'Rajasthan Royals',away:'Sunrisers Hyderabad',venue:'Jaipur'},
+  {no:37,date:'2026-04-26',home:'Gujarat Titans',away:'Chennai Super Kings',venue:'Ahmedabad'},
+  {no:38,date:'2026-04-26',home:'Lucknow Super Giants',away:'Kolkata Knight Riders',venue:'Lucknow'},
+  {no:39,date:'2026-04-27',home:'Delhi Capitals',away:'Royal Challengers Bengaluru',venue:'Delhi'},
+  {no:40,date:'2026-04-28',home:'Punjab Kings',away:'Rajasthan Royals',venue:'New Chandigarh'},
+  {no:41,date:'2026-04-29',home:'Mumbai Indians',away:'Sunrisers Hyderabad',venue:'Mumbai'},
+  {no:42,date:'2026-04-30',home:'Gujarat Titans',away:'Royal Challengers Bengaluru',venue:'Ahmedabad'},
+  {no:43,date:'2026-05-01',home:'Rajasthan Royals',away:'Delhi Capitals',venue:'Jaipur'},
+  {no:44,date:'2026-05-02',home:'Chennai Super Kings',away:'Mumbai Indians',venue:'Chennai'},
+  {no:45,date:'2026-05-03',home:'Sunrisers Hyderabad',away:'Kolkata Knight Riders',venue:'Hyderabad'},
+  {no:46,date:'2026-05-03',home:'Gujarat Titans',away:'Punjab Kings',venue:'Ahmedabad'},
+  {no:47,date:'2026-05-04',home:'Mumbai Indians',away:'Lucknow Super Giants',venue:'Mumbai'},
+  {no:48,date:'2026-05-05',home:'Delhi Capitals',away:'Chennai Super Kings',venue:'Delhi'},
+  {no:49,date:'2026-05-06',home:'Sunrisers Hyderabad',away:'Punjab Kings',venue:'Hyderabad'},
+  {no:50,date:'2026-05-07',home:'Lucknow Super Giants',away:'Royal Challengers Bengaluru',venue:'Lucknow'},
+  {no:51,date:'2026-05-08',home:'Delhi Capitals',away:'Kolkata Knight Riders',venue:'Delhi'},
+  {no:52,date:'2026-05-09',home:'Rajasthan Royals',away:'Punjab Kings',venue:'Jaipur'},
+  {no:53,date:'2026-05-10',home:'Chennai Super Kings',away:'Lucknow Super Giants',venue:'Chennai'},
+  {no:54,date:'2026-05-10',home:'Royal Challengers Bengaluru',away:'Mumbai Indians',venue:'Raipur'},
+  {no:55,date:'2026-05-11',home:'Punjab Kings',away:'Delhi Capitals',venue:'Dharamshala'},
+  {no:56,date:'2026-05-12',home:'Gujarat Titans',away:'Sunrisers Hyderabad',venue:'Ahmedabad'},
+  {no:57,date:'2026-05-13',home:'Royal Challengers Bengaluru',away:'Kolkata Knight Riders',venue:'Raipur'},
+  {no:58,date:'2026-05-14',home:'Punjab Kings',away:'Mumbai Indians',venue:'Dharamshala'},
+  {no:59,date:'2026-05-15',home:'Lucknow Super Giants',away:'Chennai Super Kings',venue:'Lucknow'},
+  {no:60,date:'2026-05-16',home:'Kolkata Knight Riders',away:'Gujarat Titans',venue:'Kolkata'},
+  {no:61,date:'2026-05-17',home:'Punjab Kings',away:'Royal Challengers Bengaluru',venue:'Dharamshala'},
+  {no:62,date:'2026-05-17',home:'Delhi Capitals',away:'Rajasthan Royals',venue:'Delhi'},
+  {no:63,date:'2026-05-18',home:'Chennai Super Kings',away:'Sunrisers Hyderabad',venue:'Chennai'},
+  {no:64,date:'2026-05-19',home:'Rajasthan Royals',away:'Lucknow Super Giants',venue:'Jaipur'},
+  {no:65,date:'2026-05-20',home:'Kolkata Knight Riders',away:'Mumbai Indians',venue:'Kolkata'},
+  {no:66,date:'2026-05-21',home:'Chennai Super Kings',away:'Gujarat Titans',venue:'Chennai'},
+  {no:67,date:'2026-05-22',home:'Sunrisers Hyderabad',away:'Royal Challengers Bengaluru',venue:'Hyderabad'},
+  {no:68,date:'2026-05-23',home:'Lucknow Super Giants',away:'Punjab Kings',venue:'Lucknow'},
+  {no:69,date:'2026-05-24',home:'Mumbai Indians',away:'Rajasthan Royals',venue:'Mumbai'},
+  {no:70,date:'2026-05-24',home:'Kolkata Knight Riders',away:'Delhi Capitals',venue:'Kolkata'},
+  {no:71,date:'2026-06-01',home:'TBD - Team 1',away:'TBD - Team 2',venue:'TBD',playoff:'Qualifier 1'},
+  {no:72,date:'2026-06-04',home:'TBD - Team 3',away:'TBD - Team 4',venue:'TBD',playoff:'Eliminator'},
+  {no:73,date:'2026-06-07',home:'TBD - Team 5',away:'TBD - Team 6',venue:'TBD',playoff:'Qualifier 2'},
+  {no:74,date:'2026-06-10',home:'TBD - Team 7',away:'TBD - Team 8',venue:'TBD',playoff:'FINAL 🏆'},
+];
+
+const MONTHS=['MAR 2026','APR 2026','MAY 2026','JUN 2026'];
+const MF=['2026-03','2026-04','2026-05','2026-06'];
+let curM=0, sel=null, D={};
+
+async function load(){
+  try{
+    const r=await window.storage.get('ipl26v3',true);
+    if(r)D=JSON.parse(r.value);
+  }catch(e){}
+  all();
+}
+async function save(){try{await window.storage.set('ipl26v3',JSON.stringify(D),true);}catch(e){}}
+
+function all(){ updateHero(); renderHome(); renderMatchList(); renderLog(); }
+
+function updateHero(){
+  let ct=0,dt=0,cw=0,dw=0,n=0;
+  Object.values(D).forEach(r=>{ct+=r.chotu||0;dt+=r.dhakan||0;n++;if(r.chotu>r.dhakan)cw++;else if(r.dhakan>r.chotu)dw++;});
+  document.getElementById('hs-played').textContent=n;
+  document.getElementById('hs-remain').textContent=74-n;
+  document.getElementById('hs-ctot').textContent=ct;
+  document.getElementById('hs-dtot').textContent=dt;
+  document.getElementById('hs-cwins').textContent=cw+' wins';
+  document.getElementById('hs-dwins').textContent=dw+' wins';
+}
+
+function renderHome(){
+  let ct=0,dt=0,cw=0,dw=0,n=0,cpred=0,dpred=0,pt=0,cbest=0,dbest=0;
+  Object.values(D).forEach(r=>{
+    ct+=r.chotu||0;dt+=r.dhakan||0;n++;
+    if(r.chotu>r.dhakan)cw++;else if(r.dhakan>r.chotu)dw++;
+    if(r.actualWinner){pt++;if(r.choutuPick===r.actualWinner)cpred++;if(r.dhakanPick===r.actualWinner)dpred++;}
+    if(r.chotu>cbest)cbest=r.chotu;if(r.dhakan>dbest)dbest=r.dhakan;
+  });
+
+  // Highlight cards
+  const leader=ct>=dt?'Chotu':'Dhakan';
+  const leaderPts=ct>=dt?ct:dt;
+  document.getElementById('hl-leader').textContent=leader;
+  document.getElementById('hl-leader-val').textContent=leaderPts+' pts · '+(ct>=dt?cw:dw)+' wins';
+  document.getElementById('hl-leader').parentElement.className='hl-card '+(ct>=dt?'hl-chotu':'hl-dhakan');
+  document.getElementById('hl-leader').parentElement.querySelector('.hl-role').textContent=ct===dt?'🤝 All Square':'🏅 Current Leader';
+
+  const bestPred=cpred>=dpred?'Chotu':'Dhakan';
+  const bestPredVal=cpred>=dpred?cpred:dpred;
+  document.getElementById('hl-predictor').textContent=bestPred;
+  document.getElementById('hl-predictor-val').textContent=bestPredVal+'/'+pt+' correct picks';
+
+  const mostWinner=cw>=dw?'Chotu':'Dhakan';
+  document.getElementById('hl-mostwins').textContent=mostWinner;
+  document.getElementById('hl-mostwins-val').textContent=(cw>=dw?cw:dw)+' match wins';
+  document.getElementById('hl-mostwins').parentElement.className='hl-card '+(cw>=dw?'hl-chotu':'hl-dhakan');
+
+  const behind=ct<=dt?'Chotu':'Dhakan';
+  const behindPts=ct<=dt?ct:dt;
+  document.getElementById('hl-behind').textContent=behind;
+  document.getElementById('hl-behind-val').textContent=behindPts+' pts · trailing by '+(ct===dt?0:Math.abs(ct-dt))+' pts';
+
+  // Points table
+  const players=[
+    {name:'Chotu',av:'C',cls:'chotu',pts:ct,wins:cw,played:n},
+    {name:'Dhakan',av:'D',cls:'dhakan',pts:dt,wins:dw,played:n}
+  ].sort((a,b)=>b.pts-a.pts);
+  document.getElementById('pts-rows').innerHTML=players.map((p,i)=>`
+    <div class="pts-row">
+      <div class="pts-pos-num">${i+1}</div>
+      <div class="pts-player">
+        <div class="pts-avatar" style="background:rgba(${p.cls==='chotu'?'245,200,66':'56,189,248'},0.12);color:var(--${p.cls});border:2px solid rgba(${p.cls==='chotu'?'245,200,66':'56,189,248'},0.3)">${p.av}</div>
+        <div>
+          <div class="pts-pname">${p.name} ${i===0&&n>0?'👑':''}</div>
+        </div>
+      </div>
+      <div class="pts-played">${p.played}</div>
+      <div class="pts-gross" style="color:var(--${p.cls})">${p.pts}</div>
+      <div class="pts-wins"><span class="win-tag ${p.cls==='chotu'?'win-c':'win-d'}">${p.wins} W</span></div>
+    </div>
+  `).join('');
+}
+
+function shiftMonth(d){curM=Math.max(0,Math.min(3,curM+d));document.getElementById('month-lbl').textContent=MONTHS[curM];renderMatchList();}
+
+function renderMatchList(){
+  const list=document.getElementById('match-list');
+  const filtered=MATCHES.filter(m=>m.date.startsWith(MF[curM]));
+  list.innerHTML=filtered.map(m=>{
+    const r=D[m.no];
+    const dt=new Date(m.date);
+    const day=dt.getDate();
+    const mon=dt.toLocaleDateString('en-IN',{month:'short'}).toUpperCase();
+    return `<div class="match-card ${r?'done':''} ${sel===m.no?'selected':''}${m.playoff?' style=border-color:rgba(249,115,22,0.4)':''}"\n onclick="openMatch(${m.no})">
+      <div class="mc-date"><div class="mc-day">${day}</div><div class="mc-mon">${mon}</div><div class="mc-num">M${m.no}</div></div>
+      <div class="mc-info">
+        ${m.playoff?'<div class="playoff-badge '+(m.playoff.includes('FINAL')?'final':'')+'">'+m.playoff+'</div>':''}
+        <strong>${m.home}<br>vs ${m.away}</strong>
+        <div class="mc-venue">📍 ${m.venue}</div>
+      </div>
+      <div class="mc-right"><div class="mc-dot ${r?'done':''}"></div><div class="mc-scores ${r?'done':''}">${r?'🟡 '+r.chotu+'<br>🔵 '+r.dhakan:'Pending'}</div></div>
+    </div>`;
+  }).join('');
+}
+
+function openMatch(no){
+  sel=no; renderMatchList();
+  const m=MATCHES.find(x=>x.no===no);
+  const r=D[no]||{};
+  const panel=document.getElementById('entry-panel');
+  panel.classList.add('open');
+  document.getElementById('ep-badge').textContent='MATCH '+no;
+  document.getElementById('ep-title').textContent=m.home+' vs '+m.away;
+  ['chotu','dhakan'].forEach(p=>{
+    const cont=document.getElementById(p+'-inputs');
+    cont.innerHTML='';
+    for(let i=1;i<=7;i++){
+      const v=r[p+'Players']?r[p+'Players'][i-1]||'':'';
+      cont.innerHTML+=`<input class="fi" placeholder="Player ${i}" value="${v}" id="${p}-p${i}">`;
+    }
+  });
+  const teams=[m.home,m.away];
+  ['chotu-pick','dhakan-pick','actual-winner'].forEach(id=>{
+    const s=document.getElementById(id);
+    const cur=id==='chotu-pick'?r.choutuPick||'':id==='dhakan-pick'?r.dhakanPick||'':r.actualWinner||'';
+    s.innerHTML=`<option value="">-- Pick --</option>`+teams.map(t=>`<option value="${t}" ${cur===t?'selected':''}>${t}</option>`).join('');
+  });
+  document.getElementById('manual-chotu').value=r.choutuBase||'';
+  document.getElementById('manual-dhakan').value=r.dhakanBase||'';
+  document.getElementById('scorecard-url').value=r.url||'';
+  renderPredTags(r);
+  document.getElementById('breakdown-box').style.display='none';
+  setStatus('','');
+  window._lastBreakdown=null;
+  loadApiUrl();
+  if(r.chotu!==undefined){
+    showRes(r);
+    document.getElementById('save-btn').textContent='✏️ UPDATE MATCH';
+    document.getElementById('edit-notice').style.display='block';
+    if(r.choutuBreakdown&&r.choutuBreakdown.length)
+      renderBreakdown(r.choutuBreakdown,r.dhakanBreakdown,r.choutuBase,r.dhakanBase);
+  } else {
+    document.getElementById('res-box').classList.remove('on');
+    document.getElementById('save-btn').textContent='💾 SAVE MATCH RESULT';
+    document.getElementById('edit-notice').style.display='none';
+  }
+  panel.scrollIntoView({behavior:'smooth',block:'nearest'});
+}
+
+function renderPredTags(r){
+  const c=document.getElementById('pred-tags');
+  if(!r||!r.actualWinner){c.innerHTML='';return;}
+  const cp=r.choutuPick===r.actualWinner,dp=r.dhakanPick===r.actualWinner;
+  c.innerHTML=
+    (r.choutuPick?`<span class="ptag ${cp?'ptag-ok':'ptag-no'}">🟡 Chotu: ${r.choutuPick} ${cp?'✅ +20':'❌'}</span>`:'')+
+    (r.dhakanPick?`<span class="ptag ${dp?'ptag-ok':'ptag-no'}">🔵 Dhakan: ${r.dhakanPick} ${dp?'✅ +20':'❌'}</span>`:'')+
+    `<span class="ptag ptag-n">🏆 ${r.actualWinner} won</span>`;
+}
+
+// ── SCORING RULES ──
+function calcFromStats(s) {
+  let pts=0, parts=[];
+  const runs=+s.runs||0, fours=+s.fours||0, sixes=+s.sixes||0;
+  const wkts=+s.wkts||0, maidens=+s.maidens||0;
+  const catches=+s.catches||0, stumpings=+s.stumpings||0, runouts=+s.runouts||0;
+  if(runs>0){pts+=runs;parts.push(runs+'R');}
+  if(fours>0){pts+=fours;parts.push(fours+'x4+'+fours);}
+  if(sixes>0){pts+=sixes*2;parts.push(sixes+'x6+'+(sixes*2));}
+  if(runs>=100){pts+=40;parts.push('100 bonus+40');}
+  else if(runs>=50){pts+=30;parts.push('50 bonus+30');}
+  if(wkts>=1){
+    const base=Math.min(wkts,3); pts+=base*20; parts.push(base+'wkt'+(base>1?'s':'')+'+'+(base*20));
+    if(wkts>=3){pts+=10;parts.push('3+wkt+10');}
+    if(wkts>=4){pts+=30;parts.push('4th+30');}
+    if(wkts>=5){pts+=50;parts.push('5th+50');}
+  }
+  if(maidens>0){pts+=maidens*10;parts.push(maidens+'maiden+'+(maidens*10));}
+  if(s.hattrick){pts+=50;parts.push('hattrick+50');}
+  if(catches>0){pts+=catches*10;parts.push(catches+'catch+'+(catches*10));}
+  if(stumpings>0){pts+=stumpings*10;parts.push(stumpings+'stump+'+(stumpings*10));}
+  if(runouts>0){pts+=runouts*10;parts.push(runouts+'ro+'+(runouts*10));}
+  return {pts, detail: parts.join(' · ')||'DNP'};
+}
+
+
+
+function renderBreakdown(cBrk, dBrk, cTot, dTot) {
+  const box=document.getElementById('breakdown-box');
+  const mkRows=(brk,color)=>brk.map(p=>`
+    <div class="breakdown-player">
+      <div><div class="bp-name">${p.name}</div><div class="bp-detail">${p.detail}</div></div>
+      <div class="bp-pts" style="color:${color}">${p.pts}</div>
+    </div>`).join('');
+  box.innerHTML=`
+    <div class="breakdown-title ct">🟡 Chotu's Players</div>
+    ${mkRows(cBrk,'var(--chotu)')}
+    <div class="breakdown-total"><span>Total</span><span class="bt-val" style="color:var(--chotu)">${cTot}</span></div>
+    <div style="height:14px"></div>
+    <div class="breakdown-title dt">🔵 Dhakan's Players</div>
+    ${mkRows(dBrk,'var(--dhakan)')}
+    <div class="breakdown-total"><span>Total</span><span class="bt-val" style="color:var(--dhakan)">${dTot}</span></div>`;
+  box.style.display='block';
+}
+
+// API URL — update this after Render deployment
+const API_URL = "https://ipl-satta.onrender.com";
+
+function saveApiUrl() {}
+function loadApiUrl() {
+  if (API_URL && API_URL !== "https://ipl-satta.onrender.com") {
+    document.getElementById("api-status").textContent = "✅ Connected to calculator API";
+    document.getElementById("api-status").style.color = "var(--green)";
+  } else {
+    document.getElementById("api-status").textContent = "✅ Calculator API ready";
+    document.getElementById("api-status").style.color = "var(--muted)";
+  }
+}
+
+function setStatus(type, msg) {
+  const el = document.getElementById('calc-status');
+  el.className = 'calc-status ' + (type||'');
+  el.textContent = msg;
+}
+
+async function calculateScores() {
+  const scorecardUrl = document.getElementById('scorecard-url').value.trim();
+
+  if (!scorecardUrl) { setStatus('error','⚠️ Enter scorecard URL first'); return; }
+  if (!API_URL || API_URL === "https://ipl-satta.onrender.com") { // API configured }
+
+  const cpp=[], dpp=[];
+  for(let i=1;i<=7;i++){
+    const cv = document.getElementById('chotu-p'+i)?.value.trim()||'';
+    const dv = document.getElementById('dhakan-p'+i)?.value.trim()||'';
+    if(cv) cpp.push(cv);
+    if(dv) dpp.push(dv);
+  }
+  if(!cpp.length && !dpp.length) { setStatus('error','⚠️ Enter player names first'); return; }
+
+  setStatus('loading','⏳ Fetching scorecard & calculating…');
+  document.getElementById('calc-btn').disabled = true;
+
+  try {
+    const endpoint = API_URL.replace(/\/$/, '') + '/calculate';
+    const res = await fetch(endpoint, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ url: scorecardUrl, chotu: cpp, dhakan: dpp })
+    });
+    const data = await res.json();
+    if (!res.ok || data.error) throw new Error(data.error || 'Server error');
+
+    document.getElementById('manual-chotu').value = data.chotu.total;
+    document.getElementById('manual-dhakan').value = data.dhakan.total;
+
+    const cBrk = data.chotu.breakdown;
+    const dBrk = data.dhakan.breakdown;
+    window._lastBreakdown = { cBrk, dBrk };
+    renderBreakdown(cBrk, dBrk, data.chotu.total, data.dhakan.total);
+    setStatus('done', '✅ Scores calculated! Review below.');
+
+  } catch(e) {
+    if (e.message.includes('Failed to fetch') || e.message.includes('NetworkError')) {
+      setStatus('error', '❌ Cannot reach Colab. Is your notebook running?');
+    } else {
+      setStatus('error', '❌ ' + e.message);
+    }
+    console.error(e);
+  }
+  document.getElementById('calc-btn').disabled = false;
+}
+
+function saveMatch(){
+  if(!sel)return;
+  const cb=parseInt(document.getElementById('manual-chotu').value)||0;
+  const db=parseInt(document.getElementById('manual-dhakan').value)||0;
+  const url=document.getElementById('scorecard-url').value;
+  const cp=document.getElementById('chotu-pick').value;
+  const dp=document.getElementById('dhakan-pick').value;
+  const aw=document.getElementById('actual-winner').value;
+  const cbon=(aw&&cp===aw)?20:0, dbon=(aw&&dp===aw)?20:0;
+  const cpp=[],dpp=[];
+  for(let i=1;i<=7;i++){cpp.push(document.getElementById('chotu-p'+i).value);dpp.push(document.getElementById('dhakan-p'+i).value);}
+  const isEdit=!!D[sel];
+  const cBrk=window._lastBreakdown?.cBrk||D[sel]?.choutuBreakdown||[];
+  const dBrk=window._lastBreakdown?.dBrk||D[sel]?.dhakanBreakdown||[];
+  D[sel]={chotu:cb+cbon,dhakan:db+dbon,choutuBase:cb,dhakanBase:db,choutuBonus:cbon,dhakanBonus:dbon,choutuPick:cp,dhakanPick:dp,actualWinner:aw,choutuPlayers:cpp,dhakanPlayers:dpp,url,choutuBreakdown:cBrk,dhakanBreakdown:dBrk};
+  save();
+  if(cBrk.length) renderBreakdown(cBrk,dBrk,cb,db);
+  renderPredTags(D[sel]);
+  showRes(D[sel]);
+  document.getElementById('save-btn').textContent='✏️ UPDATE MATCH';
+  document.getElementById('edit-notice').style.display='block';
+  all();
+  window._lastBreakdown=null;
+  const f=document.getElementById('saved-flash');
+  f.textContent=isEdit?'✅ Match updated!':'✅ Match saved!';
+  f.classList.add('on');setTimeout(()=>f.classList.remove('on'),2500);
+}
+
+function saveMatch(){
+  if(!sel)return;
+  const cb=parseInt(document.getElementById('manual-chotu').value)||0;
+  const db=parseInt(document.getElementById('manual-dhakan').value)||0;
+  const url=document.getElementById('scorecard-url').value;
+  const cp=document.getElementById('chotu-pick').value;
+  const dp=document.getElementById('dhakan-pick').value;
+  const aw=document.getElementById('actual-winner').value;
+  const cbon=(aw&&cp===aw)?20:0, dbon=(aw&&dp===aw)?20:0;
+  const cpp=[],dpp=[];
+  for(let i=1;i<=7;i++){cpp.push(document.getElementById('chotu-p'+i).value);dpp.push(document.getElementById('dhakan-p'+i).value);}
+  const isEdit=!!D[sel];
+  const cBrk=getBreakdown('chotu'), dBrk=getBreakdown('dhakan');
+  const cSnap=getStatsSnapshot('chotu'), dSnap=getStatsSnapshot('dhakan');
+  D[sel]={chotu:cb+cbon,dhakan:db+dbon,choutuBase:cb,dhakanBase:db,choutuBonus:cbon,dhakanBonus:dbon,choutuPick:cp,dhakanPick:dp,actualWinner:aw,choutuPlayers:cpp,dhakanPlayers:dpp,url,choutuBreakdown:cBrk,dhakanBreakdown:dBrk,choutuStats:cSnap,dhakanStats:dSnap};
+  save();
+  renderBreakdown(cBrk,dBrk,cb,db);
+  renderPredTags(D[sel]);
+  showRes(D[sel]);
+  document.getElementById('save-btn').textContent='✏️ UPDATE MATCH';
+  document.getElementById('edit-notice').style.display='block';
+  all();
+  const f=document.getElementById('saved-flash');
+  f.textContent=isEdit?'✅ Match updated successfully!':'✅ Match saved successfully!';
+  f.classList.add('on'); setTimeout(()=>f.classList.remove('on'),2500);
+}
+function saveMatch(){
+  if(!sel)return;
+  const cb=parseInt(document.getElementById('manual-chotu').value)||0;
+  const db=parseInt(document.getElementById('manual-dhakan').value)||0;
+  const url=document.getElementById('scorecard-url').value;
+  const cp=document.getElementById('chotu-pick').value;
+  const dp=document.getElementById('dhakan-pick').value;
+  const aw=document.getElementById('actual-winner').value;
+  const cbon=(aw&&cp===aw)?20:0, dbon=(aw&&dp===aw)?20:0;
+  const cpp=[],dpp=[];
+  for(let i=1;i<=7;i++){cpp.push(document.getElementById('chotu-p'+i).value);dpp.push(document.getElementById('dhakan-p'+i).value);}
+  const isEdit = !!D[sel];
+  D[sel]={chotu:cb+cbon,dhakan:db+dbon,choutuBase:cb,dhakanBase:db,choutuBonus:cbon,dhakanBonus:dbon,choutuPick:cp,dhakanPick:dp,actualWinner:aw,choutuPlayers:cpp,dhakanPlayers:dpp,url};
+  save();
+  renderPredTags(D[sel]);
+  showRes(D[sel]);
+  document.getElementById('save-btn').textContent='✏️ UPDATE MATCH';
+  document.getElementById('edit-notice').style.display='block';
+  all();
+  const f=document.getElementById('saved-flash');
+  f.textContent = isEdit ? '✅ Match updated successfully!' : '✅ Match saved successfully!';
+  f.classList.add('on'); setTimeout(()=>f.classList.remove('on'),2500);
+}
+
+function showRes(r){
+  document.getElementById('res-c').textContent=r.chotu;
+  document.getElementById('res-d').textContent=r.dhakan;
+  document.getElementById('res-c-brk').textContent=r.choutuBonus?`${r.choutuBase} pts + 🎯 +20 prediction bonus`:`${r.choutuBase} base pts`;
+  document.getElementById('res-d-brk').textContent=r.dhakanBonus?`${r.dhakanBase} pts + 🎯 +20 prediction bonus`:`${r.dhakanBase} base pts`;
+  const w=r.chotu>r.dhakan?`🟡 Chotu wins by ${r.chotu-r.dhakan} pts!`:r.dhakan>r.chotu?`🔵 Dhakan wins by ${r.dhakan-r.chotu} pts!`:`🤝 It's a tie!`;
+  document.getElementById('res-win').textContent=w;
+  document.getElementById('res-box').classList.add('on');
+}
+
+function renderLog(){
+  const cont=document.getElementById('log-content');
+  const entries=Object.entries(D);
+  if(!entries.length){cont.innerHTML='<div class="empty-state"><div class="es-icon">🏏</div><div class="es-title">No matches yet</div><div class="es-sub">Save your first match!</div></div>';return;}
+  let ct=0,dt=0;
+  const rows=entries.map(([no,r])=>{
+    ct+=r.chotu;dt+=r.dhakan;
+    const m=MATCHES.find(x=>x.no==no);
+    let wb=r.chotu>r.dhakan?`<span class="win-tag win-c">CHOTU</span>`:r.dhakan>r.chotu?`<span class="win-tag win-d">DHAKAN</span>`:`<span class="win-tag win-t">TIE</span>`;
+    const cp=r.actualWinner?(r.choutuPick===r.actualWinner?'🟡✅':'🟡❌'):'';
+    const dp=r.actualWinner?(r.dhakanPick===r.actualWinner?'🔵✅':'🔵❌'):'';
+    return `<tr>
+      <td class="rt-m">M${no}</td>
+      <td class="rt-teams">${m?m.home+' vs '+m.away:'—'}<small>${m?m.venue:''}</small></td>
+      <td class="rt-c">${r.chotu}${r.choutuBonus?'<span class="bt"> 🎯</span>':''}</td>
+      <td class="rt-d">${r.dhakan}${r.dhakanBonus?'<span class="bt"> 🎯</span>':''}</td>
+      <td>${wb}<br><span style="font-size:11px">${cp}${dp}</span></td>
+    </tr>`;
+  }).join('');
+  cont.innerHTML=`<div class="rt-wrap"><table class="rt">
+    <thead><tr><th>#</th><th>Match</th><th style="color:var(--chotu)">🟡 Chotu</th><th style="color:var(--dhakan)">🔵 Dhakan</th><th>Result</th></tr></thead>
+    <tbody>${rows}</tbody>
+    <tfoot><tr>
+      <td colspan="2" style="padding:12px;font-size:10px;font-weight:800;letter-spacing:1px;color:var(--muted)">TOTAL</td>
+      <td class="rt-c" style="font-size:18px">${ct}</td>
+      <td class="rt-d" style="font-size:18px">${dt}</td>
+      <td>${ct>dt?'<span class="win-tag win-c">🟡 LEADS</span>':dt>ct?'<span class="win-tag win-d">🔵 LEADS</span>':'<span class="win-tag win-t">TIE</span>'}</td>
+    </tr></tfoot>
+  </table></div>`;
+}
+
+function showTab(t){
+  ['home','matches','log','rules'].forEach(x=>{document.getElementById('tab-'+x).style.display=x===t?'block':'none';});
+  document.querySelectorAll('.nav-btn').forEach((b,i)=>{b.classList.toggle('active',['home','matches','log','rules'][i]===t);});
+}
+
+document.getElementById('month-lbl').textContent=MONTHS[curM];
+loadApiUrl();
+load();
+</script>
+</body>
+</html>
