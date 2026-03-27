@@ -914,11 +914,11 @@ function renderBreakdown(cBrk, dBrk, cTot, dTot) {
 }
 
 // API URL — update this after Render deployment
-const API_URL = "RENDER_URL_HERE";
+const API_URL = "https://ipl-satta.onrender.com";
 
 function saveApiUrl() {}
 function loadApiUrl() {
-  if (API_URL && API_URL !== "RENDER_URL_HERE") {
+  if (API_URL && API_URL !== "https://ipl-satta.onrender.com") {
     document.getElementById("api-status").textContent = "✅ Connected to calculator API";
     document.getElementById("api-status").style.color = "var(--green)";
   } else {
@@ -937,7 +937,7 @@ async function calculateScores() {
   const scorecardUrl = document.getElementById('scorecard-url').value.trim();
 
   if (!scorecardUrl) { setStatus('error','⚠️ Enter scorecard URL first'); return; }
-  if (!API_URL || API_URL === "RENDER_URL_HERE") { setStatus('error','⚠️ API not configured. Contact admin.'); return; }
+  if (!API_URL || API_URL === "https://ipl-satta.onrender.com") { setStatus('error','⚠️ API not configured. Contact admin.'); return; }
 
   const cpp=[], dpp=[];
   for(let i=1;i<=7;i++){
