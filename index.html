@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>IPL Fantasy 2026</title>
+<title>IPL Fantasy 2026 | Chotu vs Dhakan</title>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
 <style>
 :root{--bg:#0e1020;--bg2:#131629;--card:#1a1d35;--card2:#1f2340;--border:#2a2e50;--orange:#f97316;--chotu:#f5c842;--dhakan:#38bdf8;--green:#4ade80;--red:#f87171;--purple:#a78bfa;--text:#f1f5f9;--muted:#64748b;}
@@ -14,7 +14,7 @@ body{background:var(--bg);color:var(--text);font-family:Inter,sans-serif;min-hei
 .hero-icon{width:56px;height:56px;border-radius:14px;background:linear-gradient(135deg,#f97316,#fb923c);display:flex;align-items:center;justify-content:center;font-size:26px;flex-shrink:0;}
 .hero-title{font-family:"Bebas Neue",cursive;font-size:30px;letter-spacing:3px;}
 .hero-sub{font-size:12px;color:#94a3b8;font-style:italic;margin-top:3px;}
-.stats-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--border);border:1px solid var(--border);border-radius:14px;overflow:hidden;margin-bottom:0;}
+.stats-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--border);border:1px solid var(--border);border-radius:14px;overflow:hidden;}
 .stat-cell{background:var(--card);padding:16px;text-align:center;}
 .stat-num{font-family:"Bebas Neue",cursive;font-size:34px;line-height:1;}
 .stat-lbl{font-size:10px;color:var(--muted);letter-spacing:1px;text-transform:uppercase;margin-top:2px;}
@@ -81,19 +81,10 @@ body{background:var(--bg);color:var(--text);font-family:Inter,sans-serif;min-hei
 .ep-top{display:flex;align-items:center;gap:10px;margin-bottom:18px;padding-bottom:14px;border-bottom:1px solid var(--border);}
 .ep-badge{background:var(--orange);color:white;border-radius:8px;padding:5px 12px;font-family:"Bebas Neue",cursive;font-size:14px;letter-spacing:1px;}
 .ep-title{font-size:15px;font-weight:700;line-height:1.3;}
-.ep-players{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:16px;}
-.ep-hdr{display:flex;align-items:center;gap:8px;padding:9px 12px;border-radius:10px;margin-bottom:8px;}
-.ep-hdr.c{background:rgba(245,200,66,0.08);border:1px solid rgba(245,200,66,0.2);}
-.ep-hdr.d{background:rgba(56,189,248,0.08);border:1px solid rgba(56,189,248,0.2);}
-.ep-av{width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:"Bebas Neue",cursive;font-size:14px;}
-.ep-hdr.c .ep-av{background:rgba(245,200,66,0.15);color:var(--chotu);}
-.ep-hdr.d .ep-av{background:rgba(56,189,248,0.15);color:var(--dhakan);}
-.ep-cname{font-size:12px;font-weight:800;letter-spacing:1px;text-transform:uppercase;}
-.ep-hdr.c .ep-cname{color:var(--chotu);}
-.ep-hdr.d .ep-cname{color:var(--dhakan);}
-.fi{background:var(--card2);border:1px solid var(--border);border-radius:8px;padding:9px 12px;color:var(--text);font-size:13px;font-weight:600;width:100%;margin-bottom:6px;}
-.fi:focus{outline:none;border-color:var(--orange);}
-.fi::placeholder{color:var(--muted);font-weight:400;}
+.how-to{background:rgba(99,102,241,0.06);border:1px solid rgba(99,102,241,0.2);border-radius:12px;padding:14px;margin-bottom:16px;}
+.how-to-title{font-size:10px;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:var(--purple);margin-bottom:10px;}
+.how-step{display:flex;align-items:center;gap:10px;font-size:13px;color:#94a3b8;padding:4px 0;}
+.step-num{width:22px;height:22px;border-radius:50%;background:var(--orange);color:white;font-size:11px;font-weight:800;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
 .pred-box{background:rgba(167,139,250,0.06);border:1px solid rgba(167,139,250,0.2);border-radius:12px;padding:14px;margin-bottom:14px;}
 .pred-hdr{font-size:10px;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:var(--purple);margin-bottom:12px;}
 .pred-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:10px;}
@@ -109,22 +100,13 @@ body{background:var(--bg);color:var(--text);font-family:Inter,sans-serif;min-hei
 .ptag-no{background:rgba(248,113,113,0.1);color:var(--red);border:1px solid rgba(248,113,113,0.2);}
 .ptag-n{background:rgba(255,255,255,0.05);color:var(--muted);border:1px solid var(--border);}
 .lbl{font-size:10px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted);margin-bottom:6px;}
-.pts-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:10px;}
-.pfi{background:var(--card2);border:1px solid var(--border);border-radius:8px;padding:10px 12px;color:var(--text);font-size:18px;font-weight:700;width:100%;}
+.pts-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:14px;}
+.pfi{background:var(--card2);border:1px solid var(--border);border-radius:8px;padding:12px;color:var(--text);font-size:24px;font-weight:800;width:100%;text-align:center;}
 .pfi:focus{outline:none;}
 .pfi.cf:focus{border-color:var(--chotu);}
 .pfi.df:focus{border-color:var(--dhakan);}
-.ufi{background:var(--card2);border:1px solid var(--border);border-radius:8px;padding:9px 12px;color:#94a3b8;font-size:11px;width:100%;}
-.ufi:focus{outline:none;border-color:var(--purple);}
-.ufi::placeholder{color:var(--muted);}
-.api-status{font-size:11px;margin-bottom:8px;min-height:16px;}
-.calc-btn{background:linear-gradient(135deg,#6366f1,#4f46e5);color:white;border:none;border-radius:10px;padding:13px;font-family:"Bebas Neue",cursive;font-size:18px;letter-spacing:2px;cursor:pointer;width:100%;margin-bottom:6px;}
-.calc-btn:disabled{background:var(--muted);cursor:not-allowed;}
-.calc-status{font-size:12px;text-align:center;min-height:16px;margin-bottom:6px;color:var(--muted);}
-.calc-status.loading{color:var(--purple);}
-.calc-status.error{color:var(--red);}
-.calc-status.done{color:var(--green);}
-.save-btn{background:linear-gradient(135deg,var(--orange),#c2410c);color:white;border:none;border-radius:10px;padding:14px;font-family:"Bebas Neue",cursive;font-size:20px;letter-spacing:2px;cursor:pointer;width:100%;margin-top:12px;margin-bottom:8px;}
+.save-btn{background:linear-gradient(135deg,var(--orange),#c2410c);color:white;border:none;border-radius:10px;padding:14px;font-family:"Bebas Neue",cursive;font-size:20px;letter-spacing:2px;cursor:pointer;width:100%;margin-bottom:8px;}
+.edit-notice{display:none;background:rgba(249,115,22,0.08);border:1px solid rgba(249,115,22,0.25);border-radius:8px;padding:10px 14px;margin-bottom:10px;font-size:12px;color:#fb923c;}
 .flash{font-size:12px;color:var(--green);text-align:center;height:18px;opacity:0;transition:opacity 0.3s;}
 .flash.on{opacity:1;}
 .res-box{background:var(--card2);border-radius:12px;padding:16px;margin-top:12px;display:none;}
@@ -141,18 +123,6 @@ body{background:var(--bg);color:var(--text);font-family:Inter,sans-serif;min-hei
 .res-card.rd .res-pts{color:var(--dhakan);}
 .res-brk{font-size:11px;color:var(--muted);margin-top:4px;}
 .res-win{background:rgba(74,222,128,0.08);border:1px solid rgba(74,222,128,0.15);border-radius:8px;padding:10px;font-size:14px;font-weight:700;text-align:center;color:var(--green);}
-.brkbox{background:var(--card2);border:1px solid var(--border);border-radius:12px;padding:14px;margin-bottom:12px;display:none;}
-.brk-title{font-size:11px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:10px;padding-bottom:8px;border-bottom:1px solid var(--border);}
-.brk-title.c{color:var(--chotu);}
-.brk-title.d{color:var(--dhakan);}
-.brk-row{display:flex;justify-content:space-between;align-items:flex-start;padding:8px 0;border-bottom:1px solid rgba(42,46,80,0.4);gap:8px;}
-.brk-row:last-of-type{border-bottom:none;}
-.brk-name{font-size:13px;font-weight:700;flex:1;}
-.brk-det{font-size:11px;color:var(--muted);margin-top:2px;line-height:1.5;}
-.brk-pts{font-family:"Bebas Neue",cursive;font-size:18px;flex-shrink:0;}
-.brk-total{display:flex;justify-content:space-between;padding:10px 0 0;margin-top:6px;border-top:2px solid var(--border);font-weight:800;font-size:15px;}
-.brk-tot-val{font-family:"Bebas Neue",cursive;font-size:24px;}
-.edit-notice{display:none;background:rgba(249,115,22,0.08);border:1px solid rgba(249,115,22,0.25);border-radius:8px;padding:10px 14px;margin-top:10px;font-size:12px;color:#fb923c;}
 .rt-wrap{overflow-x:auto;}
 .rt{width:100%;border-collapse:collapse;}
 .rt th{text-align:left;padding:10px 12px;font-size:10px;letter-spacing:1px;text-transform:uppercase;color:var(--muted);border-bottom:1px solid var(--border);font-weight:700;}
@@ -194,20 +164,25 @@ body{background:var(--bg);color:var(--text);font-family:Inter,sans-serif;min-hei
     <div class="stat-cell"><div class="stat-num" style="color:var(--chotu)" id="hs-ct">0</div><div class="stat-lbl">Chotu Points</div><div class="stat-sub" id="hs-cw">0 wins</div></div>
     <div class="stat-cell"><div class="stat-num" style="color:var(--dhakan)" id="hs-dt">0</div><div class="stat-lbl">Dhakan Points</div><div class="stat-sub" id="hs-dw">0 wins</div></div>
   </div>
+
+  <!-- Winner Banner -->
+  <div id="winner-banner" style="display:none;margin-top:14px;border-radius:12px;padding:14px 16px;text-align:center;">
+    <div id="winner-banner-inner"></div>
+  </div>
 </div>
 <div class="nav">
   <button class="nb active" onclick="showTab('home')">🏠 Home</button>
   <button class="nb" onclick="showTab('matches')">📅 Matches</button>
   <button class="nb" onclick="showTab('log')">📋 Log</button>
+  <button class="nb" onclick="showTab('stats')">📊 Stats</button>
   <button class="nb" onclick="showTab('rules')">⚡ Rules</button>
 </div>
 
-<!-- HOME -->
 <div id="tab-home" class="page">
   <div class="hl-grid">
     <div class="hl c"><div class="hl-role" id="hl-role1">🏅 Leader</div><div class="hl-name" id="hl-leader">—</div><div class="hl-val" id="hl-lval">—</div></div>
     <div class="hl g"><div class="hl-role">🎯 Best Predictor</div><div class="hl-name" id="hl-pred">—</div><div class="hl-val" id="hl-pval">—</div></div>
-    <div class="hl d"><div class="hl-role" id="hl-role3">🔝 Most Wins</div><div class="hl-name" id="hl-wins">—</div><div class="hl-val" id="hl-wval">—</div></div>
+    <div class="hl d"><div class="hl-role">🔝 Most Wins</div><div class="hl-name" id="hl-wins">—</div><div class="hl-val" id="hl-wval">—</div></div>
     <div class="hl r"><div class="hl-role">📉 Behind</div><div class="hl-name" id="hl-behind">—</div><div class="hl-val" id="hl-bval">—</div></div>
   </div>
   <div class="pts-wrap">
@@ -217,7 +192,6 @@ body{background:var(--bg);color:var(--text);font-family:Inter,sans-serif;min-hei
   </div>
 </div>
 
-<!-- MATCHES -->
 <div id="tab-matches" class="page" style="display:none">
   <div class="month-bar">
     <button class="mbtn" onclick="shiftMonth(-1)">◀</button>
@@ -226,10 +200,12 @@ body{background:var(--bg);color:var(--text);font-family:Inter,sans-serif;min-hei
   </div>
   <div id="match-list"></div>
   <div class="ep" id="ep">
-    <div class="ep-top"><div class="ep-badge" id="ep-badge">M1</div><div class="ep-title" id="ep-title">Select match</div></div>
-    <div class="ep-players">
-      <div class="cc"><div class="ep-hdr c"><div class="ep-av">C</div><div class="ep-cname">Chotu 7</div></div><div id="ci"></div></div>
-      <div class="dc"><div class="ep-hdr d"><div class="ep-av">D</div><div class="ep-cname">Dhakan 7</div></div><div id="di"></div></div>
+    <div class="ep-top"><div class="ep-badge" id="ep-badge">M1</div><div class="ep-title" id="ep-title">Select a match</div></div>
+    <div class="how-to">
+      <div class="how-to-title">💬 How to calculate scores</div>
+      <div class="how-step"><span class="step-num">1</span>Share scorecard link + 7 players each in Claude chat</div>
+      <div class="how-step"><span class="step-num">2</span>Claude calculates points instantly</div>
+      <div class="how-step"><span class="step-num">3</span>Enter the 2 numbers below and save!</div>
     </div>
     <div class="pred-box">
       <div class="pred-hdr">🎯 Winner Prediction &nbsp;<span style="color:var(--green);font-size:10px">+20 PTS IF CORRECT</span></div>
@@ -240,18 +216,18 @@ body{background:var(--bg);color:var(--text);font-family:Inter,sans-serif;min-hei
       <div><div class="plbl g">🏆 Actual Winner</div><select class="sel" id="awinner" style="max-width:260px"><option value="">-- Select --</option></select></div>
       <div class="pred-tags" id="ptags"></div>
     </div>
-    <div class="lbl">🔗 Scorecard URL</div>
-    <input type="text" class="ufi" id="sc-url" placeholder="https://espncricinfo.com/.../full-scorecard" style="margin-bottom:8px">
-    <div class="api-status" id="api-st" style="color:var(--green)">✅ Calculator API ready</div>
-    <button class="calc-btn" id="calc-btn" onclick="calcScores()">⚡ CALCULATE SCORES</button>
-    <div class="calc-status" id="calc-st"></div>
-    <div class="brkbox" id="brkbox"></div>
-    <div class="lbl" style="margin-top:10px">📊 Points (auto-filled · edit if needed)</div>
+    <div class="lbl">📊 Enter Points (from Claude calculation)</div>
     <div class="pts-grid">
-      <div><div class="lbl" style="color:var(--chotu)">🟡 Chotu Base</div><input type="number" class="pfi cf" id="mc" placeholder="0"></div>
-      <div><div class="lbl" style="color:var(--dhakan)">🔵 Dhakan Base</div><input type="number" class="pfi df" id="md" placeholder="0"></div>
+      <div>
+        <div style="font-size:10px;font-weight:800;letter-spacing:1px;color:var(--chotu);margin-bottom:8px;text-align:center">🟡 CHOTU</div>
+        <input type="number" class="pfi cf" id="mc" placeholder="0">
+      </div>
+      <div>
+        <div style="font-size:10px;font-weight:800;letter-spacing:1px;color:var(--dhakan);margin-bottom:8px;text-align:center">🔵 DHAKAN</div>
+        <input type="number" class="pfi df" id="md" placeholder="0">
+      </div>
     </div>
-    <div class="edit-notice" id="edit-notice">✏️ Edit Mode — change anything and tap Update. Previous data will be replaced.</div>
+    <div class="edit-notice" id="edit-notice">✏️ Edit Mode — update anything and tap Save.</div>
     <button class="save-btn" id="save-btn" onclick="saveMatch()">💾 SAVE MATCH RESULT</button>
     <div class="flash" id="flash">✅ Saved!</div>
     <div class="res-box" id="res-box">
@@ -264,12 +240,10 @@ body{background:var(--bg);color:var(--text);font-family:Inter,sans-serif;min-hei
   </div>
 </div>
 
-<!-- LOG -->
 <div id="tab-log" class="page" style="display:none">
-  <div id="log-content"><div class="empty"><span class="empty-icon">🏏</span><div class="empty-title">No matches yet</div><div class="empty-sub">Save your first match!</div></div></div>
+  <div id="log-content"><div class="empty"><span class="empty-icon">🏏</span><div class="empty-title">No matches yet</div><div class="empty-sub">Save your first match to see the log</div></div></div>
 </div>
 
-<!-- RULES -->
 <div id="tab-rules" class="page" style="display:none">
   <div class="rules-grid">
     <div class="rule-card"><h4 style="color:var(--orange)">🎳 Bowling</h4>
@@ -294,11 +268,86 @@ body{background:var(--bg);color:var(--text);font-family:Inter,sans-serif;min-hei
       <div class="rule-row"><span>Run Out</span><span class="rp">+10</span></div>
     </div>
     <div class="rule-card"><h4 style="color:var(--green)">🎯 Prediction</h4>
-      <div class="rule-row"><span>Correct Pick</span><span class="rp">+20</span></div>
+      <div class="rule-row"><span>Correct Team Pick</span><span class="rp">+20</span></div>
       <div style="margin-top:10px;font-size:11px;color:var(--muted);line-height:1.6">Pick which team wins before each match. +20 pts auto-added if correct!</div>
     </div>
   </div>
   <div class="prize"><div class="prize-lbl">Max Prize Pool</div><div class="prize-val">₹1500</div></div>
+</div>
+
+<!-- STATS TAB -->
+<div id="tab-stats" class="page" style="display:none">
+
+  <!-- Upload Section -->
+  <div style="background:linear-gradient(135deg,rgba(99,102,241,0.12),rgba(167,139,250,0.06));border:1px solid rgba(99,102,241,0.25);border-radius:16px;padding:18px;margin-bottom:18px;">
+    <div style="display:flex;align-items:center;gap:12px;margin-bottom:12px;">
+      <div style="width:42px;height:42px;border-radius:12px;background:rgba(99,102,241,0.2);display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0">📁</div>
+      <div>
+        <div style="font-family:Bebas Neue,cursive;font-size:18px;letter-spacing:2px;color:#a78bfa">Player Stats Database</div>
+        <div style="font-size:11px;color:#94a3b8;margin-top:2px">Upload master.json Claude gives you after each match</div>
+      </div>
+    </div>
+    <input type="file" id="sf-input" accept=".json" style="display:none" onchange="loadMaster(event)">
+    <button onclick="document.getElementById('sf-input').click()" style="background:linear-gradient(135deg,#6366f1,#4f46e5);color:white;border:none;border-radius:10px;padding:11px 20px;font-family:Bebas Neue,cursive;font-size:16px;letter-spacing:2px;cursor:pointer;width:100%;margin-bottom:8px">📂 UPLOAD MASTER.JSON</button>
+    <div id="sf-status" style="font-size:11px;color:var(--muted);text-align:center">No file loaded</div>
+    <!-- Meta strip -->
+    <div id="sf-meta" style="display:none;margin-top:12px;padding-top:12px;border-top:1px solid rgba(99,102,241,0.2);">
+      <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;text-align:center;">
+        <div style="background:rgba(255,255,255,0.04);border-radius:8px;padding:8px;">
+          <div style="font-family:Bebas Neue,cursive;font-size:22px;color:var(--chotu)" id="sf-players">0</div>
+          <div style="font-size:9px;color:var(--muted);letter-spacing:1px;text-transform:uppercase">Players</div>
+        </div>
+        <div style="background:rgba(255,255,255,0.04);border-radius:8px;padding:8px;">
+          <div style="font-family:Bebas Neue,cursive;font-size:22px;color:var(--dhakan)" id="sf-matches">0</div>
+          <div style="font-size:9px;color:var(--muted);letter-spacing:1px;text-transform:uppercase">Matches</div>
+        </div>
+        <div style="background:rgba(255,255,255,0.04);border-radius:8px;padding:8px;">
+          <div style="font-family:Bebas Neue,cursive;font-size:18px;color:var(--green)" id="sf-date">—</div>
+          <div style="font-size:9px;color:var(--muted);letter-spacing:1px;text-transform:uppercase">Updated</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Sub tabs -->
+  <div style="display:flex;gap:6px;overflow-x:auto;scrollbar-width:none;padding-bottom:4px;margin-bottom:16px;">
+    <button class="stab on" onclick="showStab('overview',this)">⭐ Overview</button>
+    <button class="stab" onclick="showStab('batting',this)">🏏 Batting</button>
+    <button class="stab" onclick="showStab('bowling',this)">🎳 Bowling</button>
+    <button class="stab" onclick="showStab('fielding',this)">🧤 Fielding</button>
+    <button class="stab" onclick="showStab('players',this)">👤 Players</button>
+  </div>
+
+  <!-- Overview -->
+  <div id="stab-overview">
+    <div id="s-no-data" style="text-align:center;padding:40px 20px;color:var(--muted)">
+      <div style="font-size:48px;opacity:0.2;margin-bottom:12px">📊</div>
+      <div style="font-family:Bebas Neue,cursive;font-size:22px;letter-spacing:2px">Upload master.json to see stats</div>
+      <div style="font-size:13px;margin-top:6px">Share scorecard link in chat → Claude calculates → gives you master.json</div>
+    </div>
+    <div id="stab-overview-content" style="display:none"></div>
+  </div>
+
+  <!-- Batting -->
+  <div id="stab-batting" style="display:none">
+    <div id="stab-batting-content"></div>
+  </div>
+
+  <!-- Bowling -->
+  <div id="stab-bowling" style="display:none">
+    <div id="stab-bowling-content"></div>
+  </div>
+
+  <!-- Fielding -->
+  <div id="stab-fielding" style="display:none">
+    <div id="stab-fielding-content"></div>
+  </div>
+
+  <!-- Players -->
+  <div id="stab-players" style="display:none">
+    <input type="text" id="sp-search" placeholder="🔍 Search player name..." oninput="renderSPlayers()" style="width:100%;background:var(--card2);border:1px solid var(--border);border-radius:10px;padding:11px 14px;color:var(--text);font-size:14px;margin-bottom:12px;">
+    <div id="stab-players-content"></div>
+  </div>
 </div>
 
 <script>
@@ -378,241 +427,150 @@ var MATCHES=[
   {no:73,date:"2026-06-07",home:"TBD Team 5",away:"TBD Team 6",venue:"TBD",playoff:"Qualifier 2"},
   {no:74,date:"2026-06-10",home:"TBD Team 7",away:"TBD Team 8",venue:"TBD",playoff:"FINAL"}
 ];
-
 var MONTHS=["MAR 2026","APR 2026","MAY 2026","JUN 2026"];
 var MF=["2026-03","2026-04","2026-05","2026-06"];
-var curM=0, selM=null, D={};
-var API_URL="https://ipl-satta.onrender.com";
-var lastBrk=null;
+var curM=0,selM=null,D={};
 
-function saveD(){
-  try{ if(window.storage) window.storage.set("ipl26v4",JSON.stringify(D),true); }catch(e){}
-}
-function loadD(){
-  try{
-    if(window.storage){
-      window.storage.get("ipl26v4",true).then(function(r){ if(r&&r.value){ D=JSON.parse(r.value); } refreshAll(); }).catch(function(){ refreshAll(); });
-    } else { refreshAll(); }
-  }catch(e){ refreshAll(); }
-}
+function saveD(){try{localStorage.setItem("ipl26",JSON.stringify(D));}catch(e){}}
+function loadD(){try{var s=localStorage.getItem("ipl26");if(s)D=JSON.parse(s);}catch(e){}refreshAll();}
 
-function refreshAll(){ updateHero(); renderHome(); renderMatchList(); renderLog(); }
+function refreshAll(){updateHero();renderHome();renderMatchList();renderLog();}
 
 function updateHero(){
   var ct=0,dt=0,cw=0,dw=0,n=0;
-  Object.keys(D).forEach(function(k){ var r=D[k]; ct+=r.chotu||0; dt+=r.dhakan||0; n++; if(r.chotu>r.dhakan) cw++; else if(r.dhakan>r.chotu) dw++; });
+  Object.keys(D).forEach(function(k){var r=D[k];ct+=r.chotu||0;dt+=r.dhakan||0;n++;if(r.chotu>r.dhakan)cw++;else if(r.dhakan>r.chotu)dw++;});
   document.getElementById("hs-played").textContent=n;
   document.getElementById("hs-rem").textContent=74-n;
   document.getElementById("hs-ct").textContent=ct;
   document.getElementById("hs-dt").textContent=dt;
   document.getElementById("hs-cw").textContent=cw+" wins";
   document.getElementById("hs-dw").textContent=dw+" wins";
+
+  // Winner banner
+  var banner = document.getElementById("winner-banner");
+  var inner = document.getElementById("winner-banner-inner");
+  if(n === 0){ banner.style.display="none"; return; }
+  banner.style.display="block";
+  var diff = Math.abs(ct-dt);
+  if(ct > dt){
+    banner.style.background="linear-gradient(135deg,rgba(245,200,66,0.15),rgba(245,200,66,0.05))";
+    banner.style.border="1px solid rgba(245,200,66,0.3)";
+    inner.innerHTML='<div style="font-size:11px;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:var(--chotu);margin-bottom:4px">🏆 CURRENT LEADER</div>'
+      +'<div style="font-family:Bebas Neue,cursive;font-size:32px;color:var(--chotu);line-height:1">🟡 CHOTU</div>'
+      +'<div style="font-size:13px;color:#94a3b8;margin-top:6px">Leading by <span style="color:var(--chotu);font-weight:800">'+diff+' pts</span> &nbsp;·&nbsp; '+ct+' vs '+dt+'</div>'
+      +'<div style="margin-top:8px;background:rgba(0,0,0,0.2);border-radius:20px;height:6px;overflow:hidden;">'
+      +'<div style="height:100%;border-radius:20px;background:var(--chotu);width:'+Math.round((ct/(ct+dt))*100)+'%"></div></div>';
+  } else if(dt > ct){
+    banner.style.background="linear-gradient(135deg,rgba(56,189,248,0.15),rgba(56,189,248,0.05))";
+    banner.style.border="1px solid rgba(56,189,248,0.3)";
+    inner.innerHTML='<div style="font-size:11px;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:var(--dhakan);margin-bottom:4px">🏆 CURRENT LEADER</div>'
+      +'<div style="font-family:Bebas Neue,cursive;font-size:32px;color:var(--dhakan);line-height:1">🔵 DHAKAN</div>'
+      +'<div style="font-size:13px;color:#94a3b8;margin-top:6px">Leading by <span style="color:var(--dhakan);font-weight:800">'+diff+' pts</span> &nbsp;·&nbsp; '+dt+' vs '+ct+'</div>'
+      +'<div style="margin-top:8px;background:rgba(0,0,0,0.2);border-radius:20px;height:6px;overflow:hidden;">'
+      +'<div style="height:100%;border-radius:20px;background:var(--dhakan);width:'+Math.round((dt/(ct+dt))*100)+'%"></div></div>';
+  } else {
+    banner.style.background="linear-gradient(135deg,rgba(255,255,255,0.06),rgba(255,255,255,0.02))";
+    banner.style.border="1px solid var(--border)";
+    inner.innerHTML='<div style="font-size:11px;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin-bottom:4px">⚖️ ALL SQUARE</div>'
+      +'<div style="font-family:Bebas Neue,cursive;font-size:28px;color:var(--text);line-height:1">🤝 PERFECT TIE</div>'
+      +'<div style="font-size:13px;color:#94a3b8;margin-top:6px">Both on <span style="color:var(--text);font-weight:800">'+ct+' pts</span></div>';
+  }
 }
 
 function renderHome(){
   var ct=0,dt=0,cw=0,dw=0,n=0,cp=0,dp=0,pt=0;
-  Object.keys(D).forEach(function(k){ var r=D[k]; ct+=r.chotu||0; dt+=r.dhakan||0; n++; if(r.chotu>r.dhakan) cw++; else if(r.dhakan>r.chotu) dw++; if(r.actualWinner){pt++;if(r.choutuPick===r.actualWinner)cp++;if(r.dhakanPick===r.actualWinner)dp++;} });
-  var leader=ct>=dt?"Chotu":"Dhakan"; var leaderPts=ct>=dt?ct:dt; var leaderW=ct>=dt?cw:dw;
+  Object.keys(D).forEach(function(k){var r=D[k];ct+=r.chotu||0;dt+=r.dhakan||0;n++;if(r.chotu>r.dhakan)cw++;else if(r.dhakan>r.chotu)dw++;if(r.actualWinner){pt++;if(r.choutuPick===r.actualWinner)cp++;if(r.dhakanPick===r.actualWinner)dp++;}});
+  var leader=ct>=dt?"Chotu":"Dhakan";
   document.getElementById("hl-leader").textContent=leader;
-  document.getElementById("hl-lval").textContent=leaderPts+" pts · "+leaderW+" wins";
+  document.getElementById("hl-lval").textContent=(ct>=dt?ct:dt)+" pts · "+(ct>=dt?cw:dw)+" wins";
   document.getElementById("hl-role1").textContent=ct===dt?"🤝 All Square":"🏅 Leader";
-  var bestP=cp>=dp?"Chotu":"Dhakan";
-  document.getElementById("hl-pred").textContent=bestP;
-  document.getElementById("hl-pval").textContent=(cp>=dp?cp:dp)+"/"+pt+" correct";
-  var mw=cw>=dw?"Chotu":"Dhakan";
-  document.getElementById("hl-wins").textContent=mw;
-  document.getElementById("hl-wval").textContent=(cw>=dw?cw:dw)+" wins";
-  var beh=ct<=dt?"Chotu":"Dhakan"; var behPts=ct<=dt?ct:dt;
-  document.getElementById("hl-behind").textContent=beh;
-  document.getElementById("hl-bval").textContent=behPts+" pts · trailing "+Math.abs(ct-dt)+" pts";
+  document.getElementById("hl-pred").textContent=cp>=dp?"Chotu":"Dhakan";
+  document.getElementById("hl-pval").textContent=(cp>=dp?cp:dp)+"/"+pt+" correct picks";
+  document.getElementById("hl-wins").textContent=cw>=dw?"Chotu":"Dhakan";
+  document.getElementById("hl-wval").textContent=(cw>=dw?cw:dw)+" match wins";
+  document.getElementById("hl-behind").textContent=ct<=dt?"Chotu":"Dhakan";
+  document.getElementById("hl-bval").textContent=(ct<=dt?ct:dt)+" pts · trailing "+Math.abs(ct-dt)+" pts";
   var players=[{n:"Chotu",av:"C",cl:"chotu",pts:ct,w:cw},{n:"Dhakan",av:"D",cl:"dhakan",pts:dt,w:dw}];
   players.sort(function(a,b){return b.pts-a.pts;});
   var html="";
   players.forEach(function(p,i){
     var avStyle="background:rgba("+(p.cl==="chotu"?"245,200,66":"56,189,248")+",0.12);color:var(--"+p.cl+");border:2px solid rgba("+(p.cl==="chotu"?"245,200,66":"56,189,248")+",0.3)";
-    html+='<div class="pts-row"><div class="pts-pos">'+(i+1)+'</div><div class="pts-player"><div class="pts-av" style="'+avStyle+'">'+p.av+'</div><div><div class="pts-pname">'+p.n+(i===0&&n>0?" 👑":"")+'</div></div></div><div class="pts-played">'+n+'</div><div class="pts-gross" style="color:var(--'+p.cl+')">'+p.pts+'</div><div class="pts-wins"><span class="win-tag '+(p.cl==="chotu"?"wc":"wd")+'">'+p.w+' W</span></div></div>';
+    html+='<div class="pts-row"><div class="pts-pos">'+(i+1)+'</div><div class="pts-player"><div class="pts-av" style="'+avStyle+'">'+p.av+'</div><div class="pts-pname">'+p.n+(i===0&&n>0?" 👑":"")+'</div></div><div class="pts-played">'+n+'</div><div class="pts-gross" style="color:var(--'+p.cl+')">'+p.pts+'</div><div><span class="win-tag '+(p.cl==="chotu"?"wc":"wd")+'">'+p.w+' W</span></div></div>';
   });
   document.getElementById("pts-rows").innerHTML=html;
 }
 
-function shiftMonth(d){
-  curM=Math.max(0,Math.min(3,curM+d));
-  document.getElementById("mlbl").textContent=MONTHS[curM];
-  renderMatchList();
-}
+function shiftMonth(d){curM=Math.max(0,Math.min(3,curM+d));document.getElementById("mlbl").textContent=MONTHS[curM];renderMatchList();}
 
 function renderMatchList(){
   var list=document.getElementById("match-list");
   var html="";
   MATCHES.forEach(function(m){
-    if(!m.date.startsWith(MF[curM])) return;
+    if(!m.date.startsWith(MF[curM]))return;
     var r=D[m.no];
     var dt=new Date(m.date);
     var day=dt.getDate();
     var mon=dt.toLocaleDateString("en-IN",{month:"short"}).toUpperCase();
-    var done=r?"done":""; var isSel=selM===m.no?"sel":"";
+    var done=r?"done":"";
+    var isSel=selM===m.no?"sel":"";
     var border=m.playoff?' style="border-color:rgba(249,115,22,0.4)"':"";
     var pb=m.playoff?'<div class="pbadge'+(m.playoff==="FINAL"?" final":"")+'">'+m.playoff+"</div>":"";
     var scores=r?"🟡 "+r.chotu+"<br>🔵 "+r.dhakan:"Pending";
-    html+='<div class="mc '+done+" "+isSel+'"'+border+' onclick="openMatch('+m.no+')">';
+    html+='<div class="mc '+done+' '+isSel+'"'+border+' onclick="openMatch('+m.no+')">';
     html+='<div class="mc-d"><div class="mc-day">'+day+'</div><div class="mc-mon">'+mon+'</div><div class="mc-no">M'+m.no+'</div></div>';
-    html+='<div class="mc-i">'+pb+'<strong>'+m.home+"<br>vs "+m.away+"</strong>"+'<div class="mc-venue">📍 '+m.venue+"</div></div>";
-    html+='<div class="mc-r"><div class="dot '+done+'"></div><div class="mc-sc '+done+'">'+scores+"</div></div>";
+    html+='<div class="mc-i">'+pb+'<strong>'+m.home+'<br>vs '+m.away+'</strong><div class="mc-venue">📍 '+m.venue+'</div></div>';
+    html+='<div class="mc-r"><div class="dot '+done+'"></div><div class="mc-sc '+done+'">'+scores+'</div></div>';
     html+="</div>";
   });
   list.innerHTML=html;
 }
 
 function openMatch(no){
-  selM=no; renderMatchList();
-  var m=null; for(var i=0;i<MATCHES.length;i++){if(MATCHES[i].no===no){m=MATCHES[i];break;}}
+  selM=no;renderMatchList();
+  var m=null;for(var i=0;i<MATCHES.length;i++){if(MATCHES[i].no===no){m=MATCHES[i];break;}}
   var r=D[no]||{};
-  var ep=document.getElementById("ep");
-  ep.className="ep open";
+  var ep=document.getElementById("ep");ep.className="ep open";
   document.getElementById("ep-badge").textContent="MATCH "+no;
   document.getElementById("ep-title").textContent=m.home+" vs "+m.away;
-  var ci=document.getElementById("ci"); ci.innerHTML="";
-  var di=document.getElementById("di"); di.innerHTML="";
-  for(var j=1;j<=7;j++){
-    var cv=r.choutuPlayers?r.choutuPlayers[j-1]||"":"";
-    var dv=r.dhakanPlayers?r.dhakanPlayers[j-1]||"":"";
-    ci.innerHTML+='<input class="fi" placeholder="Player '+j+'" value="'+cv+'" id="cp'+j+'">';
-    di.innerHTML+='<input class="fi" placeholder="Player '+j+'" value="'+dv+'" id="dp'+j+'">';
-  }
   var teams=[m.home,m.away];
   ["cpick","dpick","awinner"].forEach(function(id){
     var s=document.getElementById(id);
     var cur=id==="cpick"?r.choutuPick||"":id==="dpick"?r.dhakanPick||"":r.actualWinner||"";
     s.innerHTML='<option value="">-- Pick --</option>';
-    teams.forEach(function(t){ s.innerHTML+='<option value="'+t+'"'+(cur===t?" selected":"")+">"+t+"</option>"; });
+    teams.forEach(function(t){s.innerHTML+='<option value="'+t+'"'+(cur===t?" selected":"")+">"+t+"</option>";});
   });
-  document.getElementById("sc-url").value=r.url||"";
   document.getElementById("mc").value=r.choutuBase||"";
   document.getElementById("md").value=r.dhakanBase||"";
-  document.getElementById("brkbox").style.display="none";
-  document.getElementById("calc-st").textContent="";
-  document.getElementById("calc-st").className="calc-status";
-  lastBrk=null;
   renderPTags(r);
-  if(r.chotu!==undefined){
-    showRes(r);
-    document.getElementById("save-btn").textContent="✏️ UPDATE MATCH";
-    document.getElementById("edit-notice").style.display="block";
-    if(r.choutuBreakdown&&r.choutuBreakdown.length) renderBrk(r.choutuBreakdown,r.dhakanBreakdown,r.choutuBase,r.dhakanBase);
-  } else {
-    document.getElementById("res-box").className="res-box";
-    document.getElementById("save-btn").textContent="💾 SAVE MATCH RESULT";
-    document.getElementById("edit-notice").style.display="none";
-  }
+  if(r.chotu!==undefined){showRes(r);document.getElementById("save-btn").textContent="✏️ UPDATE MATCH";document.getElementById("edit-notice").style.display="block";}
+  else{document.getElementById("res-box").className="res-box";document.getElementById("save-btn").textContent="💾 SAVE MATCH RESULT";document.getElementById("edit-notice").style.display="none";}
   ep.scrollIntoView({behavior:"smooth",block:"nearest"});
 }
 
 function renderPTags(r){
-  var c=document.getElementById("ptags"); c.innerHTML="";
-  if(!r||!r.actualWinner) return;
-  var cp=r.choutuPick===r.actualWinner, dp=r.dhakanPick===r.actualWinner;
-  if(r.choutuPick) c.innerHTML+='<span class="ptag '+(cp?"ptag-ok":"ptag-no")+'">🟡 '+r.choutuPick+" "+(cp?"✅ +20":"❌")+"</span>";
-  if(r.dhakanPick) c.innerHTML+='<span class="ptag '+(dp?"ptag-ok":"ptag-no")+'">🔵 '+r.dhakanPick+" "+(dp?"✅ +20":"❌")+"</span>";
+  var c=document.getElementById("ptags");c.innerHTML="";
+  if(!r||!r.actualWinner)return;
+  var cp=r.choutuPick===r.actualWinner,dp=r.dhakanPick===r.actualWinner;
+  if(r.choutuPick)c.innerHTML+='<span class="ptag '+(cp?"ptag-ok":"ptag-no")+'">🟡 '+r.choutuPick+" "+(cp?"✅ +20":"❌")+"</span>";
+  if(r.dhakanPick)c.innerHTML+='<span class="ptag '+(dp?"ptag-ok":"ptag-no")+'">🔵 '+r.dhakanPick+" "+(dp?"✅ +20":"❌")+"</span>";
   c.innerHTML+='<span class="ptag ptag-n">🏆 '+r.actualWinner+" won</span>";
 }
 
-function calcPts(s){
-  var pts=0, parts=[];
-  var runs=parseInt(s.runs)||0, fours=parseInt(s.fours)||0, sixes=parseInt(s.sixes)||0;
-  var wkts=parseInt(s.wkts)||0, maidens=parseInt(s.maidens)||0;
-  var catches=parseInt(s.catches)||0, stumpings=parseInt(s.stumpings)||0, runouts=parseInt(s.runouts)||0;
-  if(runs>0){pts+=runs;parts.push(runs+"R +"+runs);}
-  if(fours>0){pts+=fours;parts.push(fours+"x4 +"+fours);}
-  if(sixes>0){pts+=sixes*2;parts.push(sixes+"x6 +"+(sixes*2));}
-  if(runs>=100){pts+=40;parts.push("100 bonus +40");} else if(runs>=50){pts+=30;parts.push("50 bonus +30");}
-  if(wkts>=1){var base=Math.min(wkts,3);pts+=base*20;parts.push(base+"wkt +"+(base*20));}
-  if(wkts>=3){pts+=10;parts.push("3+wkt +10");}
-  if(wkts>=4){pts+=30;parts.push("4th +30");}
-  if(wkts>=5){pts+=50;parts.push("5th +50");}
-  if(maidens>0){pts+=maidens*10;parts.push(maidens+"maiden +"+(maidens*10));}
-  if(s.hattrick){pts+=50;parts.push("hattrick +50");}
-  if(catches>0){pts+=catches*10;parts.push(catches+"catch +"+(catches*10));}
-  if(stumpings>0){pts+=stumpings*10;parts.push(stumpings+"stump +"+(stumpings*10));}
-  if(runouts>0){pts+=runouts*10;parts.push(runouts+"ro +"+(runouts*10));}
-  return {pts:pts, detail:parts.join(" · ")||"DNP"};
-}
-
-function setSt(type,msg){
-  var el=document.getElementById("calc-st");
-  el.className="calc-status"+(type?" "+type:"");
-  el.textContent=msg;
-}
-
-function calcScores(){
-  var url=document.getElementById("sc-url").value.trim();
-  if(!url){setSt("error","⚠️ Enter scorecard URL first");return;}
-  var cpp=[], dpp=[];
-  for(var i=1;i<=7;i++){
-    var cv=document.getElementById("cp"+i); if(cv&&cv.value.trim()) cpp.push(cv.value.trim());
-    var dv=document.getElementById("dp"+i); if(dv&&dv.value.trim()) dpp.push(dv.value.trim());
-  }
-  if(!cpp.length&&!dpp.length){setSt("error","⚠️ Enter player names first");return;}
-  setSt("loading","⏳ Fetching scorecard and calculating...");
-  document.getElementById("calc-btn").disabled=true;
-  var endpoint=API_URL+"/calculate";
-  fetch(endpoint,{
-    method:"POST",
-    headers:{"Content-Type":"application/json"},
-    body:JSON.stringify({url:url,chotu:cpp,dhakan:dpp})
-  }).then(function(res){return res.json();}).then(function(data){
-    if(data.error) throw new Error(data.error);
-    document.getElementById("mc").value=data.chotu.total;
-    document.getElementById("md").value=data.dhakan.total;
-    var cb=data.chotu.breakdown, db=data.dhakan.breakdown;
-    lastBrk={cb:cb,db:db};
-    renderBrk(cb,db,data.chotu.total,data.dhakan.total);
-    setSt("done","✅ Done! Review below. Edit points if needed.");
-  }).catch(function(e){
-    setSt("error","❌ "+e.message);
-  }).finally(function(){
-    document.getElementById("calc-btn").disabled=false;
-  });
-}
-
-function renderBrk(cb,db,ct,dt){
-  var box=document.getElementById("brkbox");
-  var html='<div class="brk-title c">🟡 Chotu Players</div>';
-  cb.forEach(function(p){ html+='<div class="brk-row"><div><div class="brk-name">'+p.name+'</div><div class="brk-det">'+p.detail+'</div></div><div class="brk-pts" style="color:var(--chotu)">'+p.pts+'</div></div>'; });
-  html+='<div class="brk-total"><span>Total</span><span class="brk-tot-val" style="color:var(--chotu)">'+ct+'</span></div>';
-  html+='<div style="height:14px"></div>';
-  html+='<div class="brk-title d">🔵 Dhakan Players</div>';
-  db.forEach(function(p){ html+='<div class="brk-row"><div><div class="brk-name">'+p.name+'</div><div class="brk-det">'+p.detail+'</div></div><div class="brk-pts" style="color:var(--dhakan)">'+p.pts+'</div></div>'; });
-  html+='<div class="brk-total"><span>Total</span><span class="brk-tot-val" style="color:var(--dhakan)">'+dt+'</span></div>';
-  box.innerHTML=html; box.style.display="block";
-}
-
 function saveMatch(){
-  if(!selM) return;
+  if(!selM)return;
   var cb=parseInt(document.getElementById("mc").value)||0;
   var db=parseInt(document.getElementById("md").value)||0;
-  var url=document.getElementById("sc-url").value;
   var cp=document.getElementById("cpick").value;
   var dp=document.getElementById("dpick").value;
   var aw=document.getElementById("awinner").value;
-  var cbon=(aw&&cp===aw)?20:0, dbon=(aw&&dp===aw)?20:0;
-  var cpp=[],dpp=[];
-  for(var i=1;i<=7;i++){cpp.push(document.getElementById("cp"+i).value);dpp.push(document.getElementById("dp"+i).value);}
+  var cbon=(aw&&cp===aw)?20:0,dbon=(aw&&dp===aw)?20:0;
   var isEdit=!!D[selM];
-  var cBrk=lastBrk?lastBrk.cb:(D[selM]?D[selM].choutuBreakdown||[]:[]);
-  var dBrk=lastBrk?lastBrk.db:(D[selM]?D[selM].dhakanBreakdown||[]:[]);
-  D[selM]={chotu:cb+cbon,dhakan:db+dbon,choutuBase:cb,dhakanBase:db,choutuBonus:cbon,dhakanBonus:dbon,choutuPick:cp,dhakanPick:dp,actualWinner:aw,choutuPlayers:cpp,dhakanPlayers:dpp,url:url,choutuBreakdown:cBrk,dhakanBreakdown:dBrk};
-  saveD();
-  if(cBrk.length) renderBrk(cBrk,dBrk,cb,db);
-  renderPTags(D[selM]);
-  showRes(D[selM]);
+  D[selM]={chotu:cb+cbon,dhakan:db+dbon,choutuBase:cb,dhakanBase:db,choutuBonus:cbon,dhakanBonus:dbon,choutuPick:cp,dhakanPick:dp,actualWinner:aw};
+  saveD();renderPTags(D[selM]);showRes(D[selM]);
   document.getElementById("save-btn").textContent="✏️ UPDATE MATCH";
   document.getElementById("edit-notice").style.display="block";
   refreshAll();
-  lastBrk=null;
-  var f=document.getElementById("flash");
-  f.textContent=isEdit?"✅ Match updated!":"✅ Match saved!";
-  f.className="flash on";
-  setTimeout(function(){f.className="flash";},2500);
+  var f=document.getElementById("flash");f.textContent=isEdit?"✅ Updated!":"✅ Saved!";f.className="flash on";setTimeout(function(){f.className="flash";},2500);
 }
 
 function showRes(r){
@@ -628,13 +586,11 @@ function showRes(r){
 function renderLog(){
   var cont=document.getElementById("log-content");
   var entries=Object.keys(D);
-  if(!entries.length){ cont.innerHTML='<div class="empty"><span class="empty-icon">🏏</span><div class="empty-title">No matches yet</div><div class="empty-sub">Save your first match!</div></div>'; return; }
-  var ct=0,dt=0;
-  var rows="";
+  if(!entries.length){cont.innerHTML='<div class="empty"><span class="empty-icon">🏏</span><div class="empty-title">No matches yet</div><div class="empty-sub">Save your first match!</div></div>';return;}
+  var ct=0,dt=0,rows="";
   entries.forEach(function(no){
-    var r=D[no];
-    ct+=r.chotu; dt+=r.dhakan;
-    var m=null; for(var i=0;i<MATCHES.length;i++){if(MATCHES[i].no==no){m=MATCHES[i];break;}}
+    var r=D[no];ct+=r.chotu;dt+=r.dhakan;
+    var m=null;for(var i=0;i<MATCHES.length;i++){if(MATCHES[i].no==no){m=MATCHES[i];break;}}
     var wb=r.chotu>r.dhakan?'<span class="win-tag wc">CHOTU</span>':r.dhakan>r.chotu?'<span class="win-tag wd">DHAKAN</span>':'<span class="win-tag wt">TIE</span>';
     var cpx=r.actualWinner?(r.choutuPick===r.actualWinner?"🟡✅":"🟡❌"):"";
     var dpx=r.actualWinner?(r.dhakanPick===r.actualWinner?"🔵✅":"🔵❌"):"";
@@ -643,9 +599,350 @@ function renderLog(){
   cont.innerHTML='<div class="rt-wrap"><table class="rt"><thead><tr><th>#</th><th>Match</th><th style="color:var(--chotu)">🟡 Chotu</th><th style="color:var(--dhakan)">🔵 Dhakan</th><th>Result</th></tr></thead><tbody>'+rows+'</tbody><tfoot><tr><td colspan="2" style="padding:12px;font-size:10px;font-weight:800;color:var(--muted)">TOTAL</td><td class="rtc" style="font-size:18px">'+ct+'</td><td class="rtd" style="font-size:18px">'+dt+'</td><td>'+(ct>dt?'<span class="win-tag wc">🟡 LEADS</span>':dt>ct?'<span class="win-tag wd">🔵 LEADS</span>':'<span class="win-tag wt">TIE</span>')+'</td></tr></tfoot></table></div>';
 }
 
+
+// ── STATS MODULE ──
+var MDATA = null;
+var curStab = 'overview';
+
+function loadMaster(e) {
+  var file = e.target.files[0];
+  if (!file) return;
+  var reader = new FileReader();
+  reader.onload = function(ev) {
+    try {
+      MDATA = JSON.parse(ev.target.result);
+      var pcount = Object.keys(MDATA.players).length;
+      document.getElementById("sf-status").textContent = "✅ " + pcount + " players loaded from " + file.name;
+      document.getElementById("sf-status").style.color = "var(--green)";
+      document.getElementById("sf-meta").style.display = "block";
+      document.getElementById("sf-players").textContent = pcount;
+      document.getElementById("sf-matches").textContent = MDATA.totalMatches;
+      document.getElementById("sf-date").textContent = MDATA.lastUpdated;
+      document.getElementById("s-no-data").style.display = "none";
+      document.getElementById("stab-overview-content").style.display = "block";
+      renderAllStats();
+    } catch(err) {
+      document.getElementById("sf-status").textContent = "❌ " + err.message;
+      document.getElementById("sf-status").style.color = "var(--red)";
+    }
+  };
+  reader.readAsText(file);
+}
+
+function showStab(t, btn) {
+  ["overview","batting","bowling","fielding","players"].forEach(function(x){
+    var el = document.getElementById("stab-"+x);
+    if(el) el.style.display = x===t?"block":"none";
+  });
+  document.querySelectorAll(".stab").forEach(function(b){ b.className="stab"; });
+  if(btn) btn.className = "stab on";
+  curStab = t;
+  if(t==="players" && MDATA) renderSPlayers();
+}
+
+function getTC(team) {
+  var m={"RCB":"team-rcb","SRH":"team-srh","MI":"team-mi","CSK":"team-csk","KKR":"team-kkr","DC":"team-dc","RR":"team-rr","PBKS":"team-pk","GT":"team-gt","LSG":"team-lsg"};
+  return m[team]||"team-def";
+}
+
+function sortP(key) {
+  return Object.entries(MDATA.players).filter(function(e){return (e[1][key]||0)>0;}).sort(function(a,b){return (b[1][key]||0)-(a[1][key]||0);});
+}
+
+// ── HERO STAT CARD ──
+function heroCard(icon, label, name, team, val, valColor, sub) {
+  return '<div style="background:var(--card);border:1px solid var(--border);border-radius:14px;padding:16px;position:relative;overflow:hidden;">'
+    +'<div style="position:absolute;top:0;left:0;right:0;height:3px;background:'+valColor+'"></div>'
+    +'<div style="font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--muted);margin-bottom:8px;">'+icon+' '+label+'</div>'
+    +'<div style="font-family:Bebas Neue,cursive;font-size:26px;color:'+valColor+';line-height:1;margin-bottom:4px;">'+name+'</div>'
+    +'<span style="font-size:9px;font-weight:700;letter-spacing:1px;padding:2px 6px;border-radius:4px;" class="'+getTC(team)+'">'+team+'</span>'
+    +'<div style="margin-top:8px;display:flex;justify-content:space-between;align-items:baseline;">'
+    +'<div style="font-family:Bebas Neue,cursive;font-size:38px;line-height:1;color:'+valColor+'">'+val+'</div>'
+    +'<div style="font-size:11px;color:var(--muted);text-align:right">'+sub+'</div>'
+    +'</div></div>';
+}
+
+// ── LEADERBOARD ──
+function makeLB(title, icon, color, barColor, items, valKey, subFn, limit) {
+  limit = limit || 8;
+  if (!items.length) return '<div style="text-align:center;padding:24px;color:var(--muted)"><div style="font-size:32px;opacity:0.2">'+icon+'</div><div style="font-size:13px;margin-top:6px">No data yet</div></div>';
+  var max = items[0][1][valKey] || 1;
+  var rows = items.slice(0,limit).map(function(item,i){
+    var name=item[0], p=item[1], val=p[valKey]||0;
+    var pct = Math.round((val/max)*100);
+    var numColor = i===0?"var(--chotu)":i===1?"#94a3b8":i===2?"#b45309":"var(--muted)";
+    var medal = i===0?" 🥇":i===1?" 🥈":i===2?" 🥉":"";
+    return '<div style="padding:12px 14px;border-bottom:1px solid rgba(42,46,80,0.5);display:grid;grid-template-columns:28px 1fr auto;gap:8px;align-items:center;">'
+      +'<div style="font-family:Bebas Neue,cursive;font-size:20px;color:'+numColor+'">'+(i+1)+'</div>'
+      +'<div><div style="font-size:13px;font-weight:700;">'+name+medal+'</div>'
+      +'<div style="display:flex;align-items:center;gap:6px;margin-top:3px;">'
+      +'<span style="font-size:9px;font-weight:700;letter-spacing:1px;padding:1px 5px;border-radius:3px;" class="'+getTC(p.team)+'">'+p.team+'</span>'
+      +(subFn?'<span style="font-size:10px;color:var(--muted)">'+subFn(p)+'</span>':"")
+      +'</div>'
+      +'<div style="height:4px;background:var(--border);border-radius:2px;margin-top:6px;overflow:hidden;"><div style="height:100%;border-radius:2px;background:'+barColor+';width:'+pct+'%"></div></div>'
+      +'</div>'
+      +'<div style="font-family:Bebas Neue,cursive;font-size:24px;color:'+color+';text-align:right">'+val+'</div>'
+      +'</div>';
+  }).join("");
+  return '<div style="background:var(--card);border:1px solid var(--border);border-radius:14px;overflow:hidden;margin-bottom:14px;">'
+    +'<div style="background:linear-gradient(135deg,#1c1f35,#252840);padding:12px 16px;display:flex;align-items:center;gap:8px;border-bottom:1px solid var(--border);">'
+    +'<div style="width:32px;height:32px;border-radius:8px;background:'+barColor+'22;display:flex;align-items:center;justify-content:center;font-size:16px;">'+icon+'</div>'
+    +'<div style="font-family:Bebas Neue,cursive;font-size:16px;letter-spacing:2px;">'+title+'</div>'
+    +'</div>'+rows+'</div>';
+}
+
+// ── MINI LEADERBOARD ──
+function miniLB(title, icon, color, items, valKey, n) {
+  n = n || 5;
+  if(!items.length) return '';
+  var rows = items.slice(0,n).map(function(item,i){
+    var name=item[0],p=item[1];
+    return '<div style="display:flex;align-items:center;gap:8px;padding:9px 12px;border-bottom:1px solid rgba(42,46,80,0.4);">'
+      +'<div style="font-family:Bebas Neue,cursive;font-size:16px;color:var(--muted);width:18px">'+(i+1)+'</div>'
+      +'<div style="flex:1;min-width:0"><div style="font-size:12px;font-weight:700;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">'+name+'</div>'
+      +'<span style="font-size:9px;font-weight:700;padding:1px 4px;border-radius:3px;" class="'+getTC(p.team)+'">'+p.team+'</span></div>'
+      +'<div style="font-family:Bebas Neue,cursive;font-size:20px;color:'+color+'">'+(p[valKey]||0)+'</div>'
+      +'</div>';
+  }).join("");
+  return '<div style="background:var(--card);border:1px solid var(--border);border-radius:12px;overflow:hidden;">'
+    +'<div style="padding:10px 12px;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:6px;">'
+    +'<div style="font-size:15px">'+icon+'</div>'
+    +'<div style="font-family:Bebas Neue,cursive;font-size:13px;letter-spacing:1px;">'+title+'</div>'
+    +'</div>'+rows+'</div>';
+}
+
+function renderAllStats() {
+  renderSOverview();
+  renderSBatting();
+  renderSBowling();
+  renderSFielding();
+}
+
+function renderSOverview() {
+  var byPts = sortP("totalPoints");
+  var byRuns = sortP("totalRuns");
+  var bySix = sortP("totalSixes");
+  var byWkt = sortP("totalWickets");
+  var byCatch = sortP("totalCatches");
+  var byFours = sortP("totalFours");
+
+  // Hero cards 2x2
+  var html = '<div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:16px;">';
+  if(byPts[0]) html += heroCard("⭐","Top Scorer",byPts[0][0],byPts[0][1].team,byPts[0][1].totalPoints,"var(--chotu)",byPts[0][1].matches+"M · "+byPts[0][1].totalRuns+"R "+byPts[0][1].totalWickets+"W");
+  if(byRuns[0]) html += heroCard("🏏","Most Runs",byRuns[0][0],byRuns[0][1].team,byRuns[0][1].totalRuns,"var(--green)",byRuns[0][1].totalFours+"x4 · "+byRuns[0][1].totalSixes+"x6");
+  if(bySix[0]) html += heroCard("💥","Most Sixes",bySix[0][0],bySix[0][1].team,bySix[0][1].totalSixes,"var(--red)",bySix[0][1].totalRuns+" runs total");
+  if(byWkt[0]) html += heroCard("🎳","Top Wicket Taker",byWkt[0][0],byWkt[0][1].team,byWkt[0][1].totalWickets,"var(--purple)",byWkt[0][1].totalMaidens+" maidens");
+  html += '</div>';
+
+  // Fun stats strip
+  var totalRuns=0,totalSixes=0,totalFours=0,totalWkts=0,total100s=0,total50s=0;
+  Object.values(MDATA.players).forEach(function(p){totalRuns+=p.totalRuns||0;totalSixes+=p.totalSixes||0;totalFours+=p.totalFours||0;totalWkts+=p.totalWickets||0;total100s+=p.hundreds||0;total50s+=p.fifties||0;});
+  html += '<div style="background:var(--card);border:1px solid var(--border);border-radius:14px;padding:14px;margin-bottom:16px;">'
+    +'<div style="font-size:10px;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin-bottom:12px;">📈 Season Totals</div>'
+    +'<div style="display:grid;grid-template-columns:repeat(3,1fr);gap:8px;text-align:center;">'
+    +'<div style="background:var(--card2);border-radius:8px;padding:10px;"><div style="font-family:Bebas Neue,cursive;font-size:24px;color:var(--green)">'+totalRuns+'</div><div style="font-size:9px;color:var(--muted);letter-spacing:1px;text-transform:uppercase;margin-top:2px">Total Runs</div></div>'
+    +'<div style="background:var(--card2);border-radius:8px;padding:10px;"><div style="font-family:Bebas Neue,cursive;font-size:24px;color:var(--red)">'+totalSixes+'</div><div style="font-size:9px;color:var(--muted);letter-spacing:1px;text-transform:uppercase;margin-top:2px">Total Sixes</div></div>'
+    +'<div style="background:var(--card2);border-radius:8px;padding:10px;"><div style="font-family:Bebas Neue,cursive;font-size:24px;color:var(--dhakan)">'+totalFours+'</div><div style="font-size:9px;color:var(--muted);letter-spacing:1px;text-transform:uppercase;margin-top:2px">Total Fours</div></div>'
+    +'<div style="background:var(--card2);border-radius:8px;padding:10px;"><div style="font-family:Bebas Neue,cursive;font-size:24px;color:var(--purple)">'+totalWkts+'</div><div style="font-size:9px;color:var(--muted);letter-spacing:1px;text-transform:uppercase;margin-top:2px">Total Wickets</div></div>'
+    +'<div style="background:var(--card2);border-radius:8px;padding:10px;"><div style="font-family:Bebas Neue,cursive;font-size:24px;color:var(--chotu)">'+total100s+'</div><div style="font-size:9px;color:var(--muted);letter-spacing:1px;text-transform:uppercase;margin-top:2px">Centuries</div></div>'
+    +'<div style="background:var(--card2);border-radius:8px;padding:10px;"><div style="font-family:Bebas Neue,cursive;font-size:24px;color:var(--orange)">'+total50s+'</div><div style="font-size:9px;color:var(--muted);letter-spacing:1px;text-transform:uppercase;margin-top:2px">Fifties</div></div>'
+    +'</div></div>';
+
+  // Top 5 leaderboard
+  html += makeLB("Fantasy Points Leaderboard","⭐","var(--chotu)","var(--chotu)",byPts,"totalPoints",function(p){return p.matches+"M";},8);
+
+  // Most selected players
+  var byTotalSel = Object.entries(MDATA.players).filter(function(e){return (e[1].totalSelections||0)>0;}).sort(function(a,b){return (b[1].totalSelections||0)-(a[1].totalSelections||0);});
+  var byChoutuSel = Object.entries(MDATA.players).filter(function(e){return (e[1].choutuSelections||0)>0;}).sort(function(a,b){return (b[1].choutuSelections||0)-(a[1].choutuSelections||0);});
+  var byDhakanSel = Object.entries(MDATA.players).filter(function(e){return (e[1].dhakanSelections||0)>0;}).sort(function(a,b){return (b[1].dhakanSelections||0)-(a[1].dhakanSelections||0);});
+
+  if(byTotalSel.length) {
+    html += '<div style="background:var(--card);border:1px solid var(--border);border-radius:14px;overflow:hidden;margin-bottom:14px;">'
+      +'<div style="background:linear-gradient(135deg,rgba(167,139,250,0.2),rgba(167,139,250,0.05));padding:12px 16px;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:8px;">'
+      +'<div style="font-size:18px">🎯</div>'
+      +'<div style="font-family:Bebas Neue,cursive;font-size:16px;letter-spacing:2px;">Most Picked Players</div>'
+      +'</div>';
+
+    byTotalSel.slice(0,8).forEach(function(item,i){
+      var name=item[0], p=item[1];
+      var cBadge = p.choutuSelections ? '<span style="background:rgba(245,200,66,0.15);color:var(--chotu);padding:2px 7px;border-radius:10px;font-size:10px;font-weight:700;margin-right:4px">🟡 Chotu x'+p.choutuSelections+'</span>' : '';
+      var dBadge = p.dhakanSelections ? '<span style="background:rgba(56,189,248,0.15);color:var(--dhakan);padding:2px 7px;border-radius:10px;font-size:10px;font-weight:700;margin-right:4px">🔵 Dhakan x'+p.dhakanSelections+'</span>' : '';
+      html += '<div style="display:grid;grid-template-columns:28px 1fr auto;gap:8px;align-items:center;padding:11px 14px;border-bottom:1px solid rgba(42,46,80,0.4);">'
+        +'<div style="font-family:Bebas Neue,cursive;font-size:18px;color:var(--muted)">'+(i+1)+'</div>'
+        +'<div><div style="font-size:13px;font-weight:700">'+name+'</div>'
+        +'<div style="margin-top:4px">'+cBadge+dBadge+'</div></div>'
+        +'<div style="text-align:right"><div style="font-family:Bebas Neue,cursive;font-size:22px;color:var(--purple)">'+p.totalPoints+'</div><div style="font-size:10px;color:var(--muted)">pts</div></div>'
+        +'</div>';
+    });
+    html += '</div>';
+
+    // Side by side - Chotu vs Dhakan favorites
+    html += '<div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:14px;">';
+
+    // Chotu's most picked
+    html += '<div style="background:var(--card);border:1px solid rgba(245,200,66,0.2);border-radius:12px;overflow:hidden;">'
+      +'<div style="padding:10px 12px;border-bottom:1px solid var(--border);background:rgba(245,200,66,0.06);">'
+      +'<div style="font-family:Bebas Neue,cursive;font-size:13px;letter-spacing:1px;color:var(--chotu)">🟡 Chotu Fav Players</div></div>';
+    byChoutuSel.slice(0,5).forEach(function(item,i){
+      var n=item[0],p=item[1];
+      html+='<div style="display:flex;align-items:center;gap:8px;padding:9px 12px;border-bottom:1px solid rgba(42,46,80,0.3);">'
+        +'<div style="font-family:Bebas Neue,cursive;font-size:14px;color:var(--muted);width:16px">'+(i+1)+'</div>'
+        +'<div style="flex:1;font-size:12px;font-weight:700;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">'+n+'</div>'
+        +'<div style="font-family:Bebas Neue,cursive;font-size:16px;color:var(--chotu)">'+p.choutuSelections+'x</div>'
+        +'</div>';
+    });
+    html += '</div>';
+
+    // Dhakan's most picked
+    html += '<div style="background:var(--card);border:1px solid rgba(56,189,248,0.2);border-radius:12px;overflow:hidden;">'
+      +'<div style="padding:10px 12px;border-bottom:1px solid var(--border);background:rgba(56,189,248,0.06);">'
+      +'<div style="font-family:Bebas Neue,cursive;font-size:13px;letter-spacing:1px;color:var(--dhakan)">🔵 Dhakan Fav Players</div></div>';
+    byDhakanSel.slice(0,5).forEach(function(item,i){
+      var n=item[0],p=item[1];
+      html+='<div style="display:flex;align-items:center;gap:8px;padding:9px 12px;border-bottom:1px solid rgba(42,46,80,0.3);">'
+        +'<div style="font-family:Bebas Neue,cursive;font-size:14px;color:var(--muted);width:16px">'+(i+1)+'</div>'
+        +'<div style="flex:1;font-size:12px;font-weight:700;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">'+n+'</div>'
+        +'<div style="font-family:Bebas Neue,cursive;font-size:16px;color:var(--dhakan)">'+p.dhakanSelections+'x</div>'
+        +'</div>';
+    });
+    html += '</div>';
+    html += '</div>';
+  }
+
+  document.getElementById("stab-overview-content").innerHTML = html;
+}
+
+function renderSBatting() {
+  var byRuns = sortP("totalRuns");
+  var bySix = sortP("totalSixes");
+  var byFours = sortP("totalFours");
+  var by50 = Object.entries(MDATA.players).filter(function(e){return (e[1].fifties||0)+(e[1].hundreds||0)>0;}).sort(function(a,b){return (b[1].hundreds*2+b[1].fifties)-(a[1].hundreds*2+a[1].fifties);});
+  var bySR = Object.entries(MDATA.players).filter(function(e){return (e[1].totalRuns||0)>=10;}).sort(function(a,b){
+    var srA=a[1].strikeRate||0, srB=b[1].strikeRate||0; return srB-srA;
+  });
+
+  var html = makeLB("Most Runs","🏏","var(--green)","var(--green)",byRuns,"totalRuns",function(p){return p.totalFours+"x4 · "+p.totalSixes+"x6 · "+p.fifties+"x50 · "+p.hundreds+"x💯";});
+  html += '<div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:14px;">';
+  html += miniLB("Most Sixes 💥","💥","var(--red)",bySix,"totalSixes",6);
+  html += miniLB("Most Fours","🔲","var(--dhakan)",byFours,"totalFours",6);
+  html += '</div>';
+
+  if(by50.length) {
+    html += '<div style="background:var(--card);border:1px solid var(--border);border-radius:14px;overflow:hidden;margin-bottom:14px;">'
+      +'<div style="background:linear-gradient(135deg,rgba(245,200,66,0.15),rgba(245,200,66,0.05));padding:12px 16px;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:8px;">'
+      +'<div style="font-size:18px">🎖</div><div style="font-family:Bebas Neue,cursive;font-size:16px;letter-spacing:2px;">Milestones — 50s & 100s</div></div>';
+    by50.forEach(function(item,i){
+      var n=item[0],p=item[1];
+      html+='<div style="display:grid;grid-template-columns:28px 1fr auto;gap:8px;align-items:center;padding:11px 14px;border-bottom:1px solid rgba(42,46,80,0.4);">'
+        +'<div style="font-family:Bebas Neue,cursive;font-size:18px;color:var(--muted)">'+(i+1)+'</div>'
+        +'<div><div style="font-size:13px;font-weight:700">'+n+'</div><span style="font-size:9px;font-weight:700;padding:1px 5px;border-radius:3px;" class="'+getTC(p.team)+'">'+p.team+'</span></div>'
+        +'<div style="text-align:right;">'
+        +(p.hundreds?'<span style="background:rgba(245,200,66,0.15);color:var(--chotu);padding:3px 8px;border-radius:20px;font-size:11px;font-weight:700;margin-left:4px">'+p.hundreds+'x💯</span>':'')
+        +(p.fifties?'<span style="background:rgba(249,115,22,0.15);color:var(--orange);padding:3px 8px;border-radius:20px;font-size:11px;font-weight:700;margin-left:4px">'+p.fifties+'x⚡</span>':'')
+        +'<div style="font-size:10px;color:var(--muted);margin-top:3px">'+p.totalRuns+' total runs</div>'
+        +'</div></div>';
+    });
+    html += '</div>';
+  }
+
+  document.getElementById("stab-batting-content").innerHTML = html;
+}
+
+function renderSBowling() {
+  var byWkt = sortP("totalWickets");
+  var byMaiden = sortP("totalMaidens");
+
+  // Best bowling figures
+  var bestFigs = Object.entries(MDATA.players).filter(function(e){return (e[1].bestFigures||0)>0;}).sort(function(a,b){return (b[1].bestFigures||0)-(a[1].bestFigures||0);});
+
+  var html = makeLB("Most Wickets","🎳","var(--purple)","var(--purple)",byWkt,"totalWickets",function(p){return p.matches+"M · "+p.totalMaidens+" maidens";});
+
+  if(byMaiden.length) {
+    html += '<div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:14px;">';
+    html += miniLB("Most Maidens 🔒","🔒","var(--dhakan)",byMaiden,"totalMaidens",5);
+
+    // 3+ wicket hauls
+    var bigHauls = Object.entries(MDATA.players).filter(function(e){return (e[1].threeWicketHauls||0)>0;}).sort(function(a,b){return (b[1].threeWicketHauls||0)-(a[1].threeWicketHauls||0);});
+    if(bigHauls.length) html += miniLB("3+ Wicket Hauls 🔥","🔥","var(--red)",bigHauls,"threeWicketHauls",5);
+    html += '</div>';
+  }
+
+  document.getElementById("stab-bowling-content").innerHTML = html || '<div style="text-align:center;padding:30px;color:var(--muted)"><div style="font-size:36px;opacity:0.2">🎳</div><div style="font-size:16px;margin-top:8px">No bowling data yet</div></div>';
+}
+
+function renderSFielding() {
+  var byCatch = sortP("totalCatches");
+  var byStump = sortP("totalStumpings");
+  var byRO = sortP("totalRunouts");
+
+  var html = "";
+  if(byCatch.length) html += makeLB("Most Catches","🤲","var(--green)","var(--green)",byCatch,"totalCatches",function(p){return p.matches+" matches";});
+
+  html += '<div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:14px;">';
+  if(byStump.length) html += miniLB("Stumpings 🧤","🧤","var(--dhakan)",byStump,"totalStumpings",5);
+  else html += '<div style="background:var(--card);border:1px solid var(--border);border-radius:12px;padding:16px;text-align:center;color:var(--muted)"><div style="font-size:24px;opacity:0.3">🧤</div><div style="font-size:12px;margin-top:6px">No stumpings yet</div></div>';
+  if(byRO.length) html += miniLB("Run Outs 🏃","🏃","var(--orange)",byRO,"totalRunouts",5);
+  else html += '<div style="background:var(--card);border:1px solid var(--border);border-radius:12px;padding:16px;text-align:center;color:var(--muted)"><div style="font-size:24px;opacity:0.3">🏃</div><div style="font-size:12px;margin-top:6px">No run outs yet</div></div>';
+  html += '</div>';
+
+  document.getElementById("stab-fielding-content").innerHTML = html || '<div style="text-align:center;padding:30px;color:var(--muted)"><div style="font-size:36px;opacity:0.2">🧤</div><div style="font-size:16px;margin-top:8px">No fielding data yet</div></div>';
+}
+
+function renderSPlayers() {
+  if(!MDATA) return;
+  var search = (document.getElementById("sp-search")||{}).value||"";
+  search = search.toLowerCase();
+  var entries = Object.entries(MDATA.players).filter(function(e){ return !search||e[0].toLowerCase().includes(search); }).sort(function(a,b){return (b[1].totalPoints||0)-(a[1].totalPoints||0);});
+  if(!entries.length){document.getElementById("stab-players-content").innerHTML='<div style="text-align:center;padding:30px;color:var(--muted)"><div style="font-size:36px;opacity:0.2">👤</div><div>No players found</div></div>';return;}
+
+  var html = entries.map(function(item,idx){
+    var name=item[0],p=item[1];
+    var init=name.split(" ").map(function(w){return w[0]||"";}).join("").slice(0,2).toUpperCase();
+    var teamC = getTC(p.team);
+    var rankColor = idx===0?"var(--chotu)":idx===1?"#94a3b8":idx===2?"#b45309":"var(--muted)";
+
+    return '<div style="background:var(--card);border:1px solid var(--border);border-radius:14px;padding:16px;margin-bottom:10px;">'
+      // Header row
+      +'<div style="display:flex;align-items:center;gap:12px;margin-bottom:12px;">'
+      +'<div style="width:44px;height:44px;border-radius:50%;background:var(--card2);border:2px solid var(--border);display:flex;align-items:center;justify-content:center;font-family:Bebas Neue,cursive;font-size:17px;flex-shrink:0;position:relative;">'
+      +init
+      +'<div style="position:absolute;top:-4px;left:-4px;width:18px;height:18px;border-radius:50%;background:var(--bg2);display:flex;align-items:center;justify-content:center;font-family:Bebas Neue,cursive;font-size:11px;color:'+rankColor+'">'+(idx+1)+'</div>'
+      +'</div>'
+      +'<div style="flex:1;">'
+      +'<div style="font-size:15px;font-weight:800;">'+name+'</div>'
+      +'<div style="display:flex;align-items:center;gap:6px;margin-top:3px;">'
+      +'<span style="font-size:9px;font-weight:700;letter-spacing:1px;padding:2px 6px;border-radius:4px;" class="'+teamC+'">'+p.team+'</span>'
+      +'<span style="font-size:10px;color:var(--muted);">'+p.matches+' match'+(p.matches>1?'es':'')+'</span>'
+      +'</div></div>'
+      +'<div style="text-align:right;">'
+      +'<div style="font-family:Bebas Neue,cursive;font-size:32px;color:var(--chotu);line-height:1">'+p.totalPoints+'</div>'
+      +'<div style="font-size:9px;color:var(--muted);font-weight:700;letter-spacing:1px;text-transform:uppercase">pts</div>'
+      +'</div></div>'
+      // Stats grid
+      +'<div style="display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin-bottom:8px;">'
+      +'<div style="background:var(--card2);border-radius:8px;padding:8px;text-align:center"><div style="font-family:Bebas Neue,cursive;font-size:20px;color:var(--green)">'+p.totalRuns+'</div><div style="font-size:9px;color:var(--muted);text-transform:uppercase;letter-spacing:1px;margin-top:1px">Runs</div></div>'
+      +'<div style="background:var(--card2);border-radius:8px;padding:8px;text-align:center"><div style="font-family:Bebas Neue,cursive;font-size:20px;color:var(--red)">'+p.totalSixes+'</div><div style="font-size:9px;color:var(--muted);text-transform:uppercase;letter-spacing:1px;margin-top:1px">Sixes</div></div>'
+      +'<div style="background:var(--card2);border-radius:8px;padding:8px;text-align:center"><div style="font-family:Bebas Neue,cursive;font-size:20px;color:var(--purple)">'+p.totalWickets+'</div><div style="font-size:9px;color:var(--muted);text-transform:uppercase;letter-spacing:1px;margin-top:1px">Wkts</div></div>'
+      +'<div style="background:var(--card2);border-radius:8px;padding:8px;text-align:center"><div style="font-family:Bebas Neue,cursive;font-size:20px;color:var(--dhakan)">'+p.totalCatches+'</div><div style="font-size:9px;color:var(--muted);text-transform:uppercase;letter-spacing:1px;margin-top:1px">Catch</div></div>'
+      +'</div>'
+      // Secondary stats
+      +'<div style="display:flex;flex-wrap:wrap;gap:6px;">'
+      +(p.totalFours?'<span style="background:rgba(56,189,248,0.08);color:var(--dhakan);padding:3px 8px;border-radius:20px;font-size:11px;font-weight:700">'+p.totalFours+' fours</span>':"")
+      +(p.fifties?'<span style="background:rgba(249,115,22,0.1);color:var(--orange);padding:3px 8px;border-radius:20px;font-size:11px;font-weight:700">'+p.fifties+'x⚡ fifty</span>':"")
+      +(p.hundreds?'<span style="background:rgba(245,200,66,0.1);color:var(--chotu);padding:3px 8px;border-radius:20px;font-size:11px;font-weight:700">'+p.hundreds+'x💯 century</span>':"")
+      +(p.totalMaidens?'<span style="background:rgba(74,222,128,0.08);color:var(--green);padding:3px 8px;border-radius:20px;font-size:11px;font-weight:700">'+p.totalMaidens+' maiden'+(p.totalMaidens>1?'s':'')+'</span>':"")
+      +(p.bestScore?'<span style="background:rgba(167,139,250,0.08);color:var(--purple);padding:3px 8px;border-radius:20px;font-size:11px;font-weight:700">Best: '+p.bestScore+'pts</span>':"")
+      +'</div>'
+      +'</div>';
+  }).join("");
+
+  document.getElementById("stab-players-content").innerHTML = html;
+}
+
+
 function showTab(t){
-  ["home","matches","log","rules"].forEach(function(x){ document.getElementById("tab-"+x).style.display=x===t?"block":"none"; });
-  document.querySelectorAll(".nb").forEach(function(b,i){ b.className="nb"+(["home","matches","log","rules"][i]===t?" active":""); });
+  ["home","matches","log","stats","rules"].forEach(function(x){document.getElementById("tab-"+x).style.display=x===t?"block":"none";});
+  document.querySelectorAll(".nb").forEach(function(b,i){b.className="nb"+(["home","matches","log","stats","rules"][i]===t?" active":"");});
 }
 
 document.getElementById("mlbl").textContent=MONTHS[curM];
